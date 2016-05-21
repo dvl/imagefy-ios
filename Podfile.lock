@@ -4,6 +4,8 @@ PODS:
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
   - IQKeyboardManagerSwift (4.0.3)
+  - Mobile-Buy-SDK (1.2.6)
+  - pop (1.0.9)
   - RNActivityView (0.0.6)
   - SwiftyJSON (2.3.2)
 
@@ -12,6 +14,8 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - IQKeyboardManagerSwift
+  - Mobile-Buy-SDK
+  - pop (~> 1.0)
   - RNActivityView
   - SwiftyJSON
 
@@ -20,9 +24,11 @@ SPEC CHECKSUMS:
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   IQKeyboardManagerSwift: b6883b720b0e76473692fdc80828442566e1075f
+  Mobile-Buy-SDK: bd8ea554e683ef47c8a0d5b4e7b36e93e0875c8c
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   RNActivityView: 889126dc047fc6fa10aac88a13ebff677c53bf82
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: ac0e843f44e7c24a5aeeaf4edf229212becc3bf1
+PODFILE CHECKSUM: 6c749d107e4a9e6b79243718f85795b59b7f413b
 
 COCOAPODS: 1.0.0

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		791F02E41CF059A900719FF6 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F02E31CF059A900719FF6 /* TabbarController.swift */; };
+		BB05A6E51CF08E3200491590 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05A6E41CF08E3200491590 /* Consts.swift */; };
+		BBA7A1661CF076AD00802865 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBA7A1651CF076AD00802865 /* Default-568h@2x.png */; };
 		BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513461CF03CFD0096CB65 /* AppDelegate.swift */; };
 		BBD5135F1CF03CFD0096CB65 /* imagefyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5135E1CF03CFD0096CB65 /* imagefyTests.swift */; };
 		BBD5136A1CF03CFD0096CB65 /* imagefyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513691CF03CFD0096CB65 /* imagefyUITests.swift */; };
@@ -54,7 +56,10 @@
 		50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		791F02E31CF059A900719FF6 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		792A33B21CF06DF100A8C7FE /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB05A6E41CF08E3200491590 /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		BBA7A1651CF076AD00802865 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BBD513431CF03CF90096CB65 /* imagefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD513461CF03CFD0096CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD5135A1CF03CFD0096CB65 /* imagefyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imagefyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +173,7 @@
 				BBD5138C1CF042C20096CB65 /* Classes */,
 				BBD513871CF0429C0096CB65 /* Storyboard */,
 				BBD513771CF03D180096CB65 /* Supporting Files */,
+				792A33B21CF06DF100A8C7FE /* Bridge.h */,
 			);
 			path = imagefy;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 		BBD513771CF03D180096CB65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BBA7A1651CF076AD00802865 /* Default-568h@2x.png */,
 				BBD513781CF042200096CB65 /* Assets.xcassets */,
 				BBD5137E1CF042200096CB65 /* imagefy.xcdatamodeld */,
 				BBD513801CF042200096CB65 /* Info.plist */,
@@ -233,6 +240,7 @@
 			children = (
 				BBD5139D1CF047580096CB65 /* Extesions.swift */,
 				BBD5139F1CF048480096CB65 /* UIDesign.swift */,
+				BB05A6E41CF08E3200491590 /* Consts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 				TargetAttributes = {
 					BBD513421CF03CF90096CB65 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZB2FJ674LY;
 					};
 					BBD513591CF03CFD0096CB65 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -360,6 +369,7 @@
 				BBD5138A1CF0429C0096CB65 /* LaunchScreen.storyboard in Resources */,
 				BBD513851CF042200096CB65 /* Info.plist in Resources */,
 				BBD513811CF042200096CB65 /* Assets.xcassets in Resources */,
+				BBA7A1661CF076AD00802865 /* Default-568h@2x.png in Resources */,
 				BBD5138B1CF0429C0096CB65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD5139E1CF047580096CB65 /* Extesions.swift in Sources */,
+				BB05A6E51CF08E3200491590 /* Consts.swift in Sources */,
 				BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */,
 				BBD5139B1CF0456B0096CB65 /* WishesCollectionViewController.swift in Sources */,
 				BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */,
@@ -638,11 +649,13 @@
 			baseConfigurationReference = 01428FC79C3D4673A1C036EE /* Pods-imagefy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhackathon.imagefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = imagefy/Bridge.h;
 			};
 			name = Debug;
 		};
@@ -651,11 +664,13 @@
 			baseConfigurationReference = C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhackathon.imagefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = imagefy/Bridge.h;
 			};
 			name = Release;
 		};
