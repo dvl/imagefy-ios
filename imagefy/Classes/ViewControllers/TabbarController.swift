@@ -7,26 +7,36 @@
 //
 
 import UIKit
+import pop
 
 class TabbarController: UITabBarController {
 
+    private var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(2.0)), dispatch_get_main_queue(), {
-            let button: UIButton = UIButton(type: .Custom)
+            self.button = UIButton(type: .Custom)
             let win:UIWindow = UIApplication.sharedApplication().delegate!.window!!
             
-            button.frame = CGRectMake(0.0, win.frame.size.height - 65, 60, 60)
-            button.layer.cornerRadius = 60/2
-            button.layer.masksToBounds = true
-            button.backgroundColor = UIColor.redColor()
-            button.tintColor = UIColor.whiteColor()
-            button.center = CGPoint(x:win.center.x , y: button.center.y)
-            button.setImage(UIImage(named: "Camera"), forState: .Normal)
-            button.addTarget(self, action: #selector(TabbarController.didTapCameraButton), forControlEvents: .TouchUpInside)
+            self.button.frame = CGRectMake(0.0, win.frame.size.height - 65, 60, 60)
+            self.button.layer.cornerRadius = 60/2
+            self.button.layer.masksToBounds = true
+            self.button.backgroundColor = UIColor.redColor()
+            self.button.tintColor = UIColor.whiteColor()
+            self.button.center = CGPoint(x:win.center.x , y: self.button.center.y)
+            self.button.setImage(UIImage(named: "Camera"), forState: .Normal)
+            self.button.addTarget(self, action: #selector(TabbarController.didTapCameraButton), forControlEvents: .TouchUpInside)
             
-            win.addSubview(button)
+            let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+            spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
+            spring.springBounciness = 20
+            
+            self.button.pop_addAnimation(spring, forKey: "sendAnimation")
+            
+            win.addSubview(self.button)
+            
         });
     }
 
@@ -36,18 +46,11 @@ class TabbarController: UITabBarController {
     }
     
     func didTapCameraButton() {
-        print("Camera button pressed")
+        let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+        spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
+        spring.springBounciness = 20
+        
+        self.button.pop_addAnimation(spring, forKey: "sendAnimation")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

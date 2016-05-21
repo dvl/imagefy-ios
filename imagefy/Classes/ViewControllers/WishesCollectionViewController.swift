@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Buy
 
 private let reuseIdentifier = "WishesCellIdentifier"
 
@@ -73,6 +74,10 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     // Margens
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(10, 5, 2, 5)
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let client = BUYClient(shopDomain: "imagefy.shopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
     }
 
     // MARK: UICollectionViewDelegate

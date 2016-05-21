@@ -54,6 +54,7 @@
 		50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		791F02E31CF059A900719FF6 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		792A33B21CF06DF100A8C7FE /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD513431CF03CF90096CB65 /* imagefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD513461CF03CFD0096CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 				BBD5138C1CF042C20096CB65 /* Classes */,
 				BBD513871CF0429C0096CB65 /* Storyboard */,
 				BBD513771CF03D180096CB65 /* Supporting Files */,
+				792A33B21CF06DF100A8C7FE /* Bridge.h */,
 			);
 			path = imagefy;
 			sourceTree = "<group>";
@@ -643,6 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhackathon.imagefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = imagefy/Bridge.h;
 			};
 			name = Debug;
 		};
@@ -656,6 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhackathon.imagefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = imagefy/Bridge.h;
 			};
 			name = Release;
 		};

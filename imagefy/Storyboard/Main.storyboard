@@ -79,20 +79,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="566" height="249"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acoustic Guitar - 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rz-sC-hTw">
-                                                    <rect key="frame" x="8" y="220" width="550" height="21"/>
+                                                    <rect key="frame" x="8" y="199" width="550" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="qmM-Mu-e9T"/>
+                                                        <constraint firstAttribute="height" constant="21" id="GSH-7D-bzl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOa-7y-Ic7">
+                                                    <rect key="frame" x="8" y="220" width="550" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="34P-7q-EfT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.32160129520000003" green="0.71085831290000001" blue="0.36629534270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.13701508620689656" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="0Rz-sC-hTw" secondAttribute="bottom" constant="8" id="8he-18-viZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="0Rz-sC-hTw" secondAttribute="trailing" constant="8" id="Kg0-AP-wD3"/>
-                                                <constraint firstItem="0Rz-sC-hTw" firstAttribute="leading" secondItem="W00-94-ylP" secondAttribute="leading" constant="8" id="f7R-lt-6fx"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZOa-7y-Ic7" secondAttribute="bottom" constant="8" id="9uZ-ZR-tAR"/>
+                                                <constraint firstItem="0Rz-sC-hTw" firstAttribute="leading" secondItem="W00-94-ylP" secondAttribute="leading" constant="8" id="Dx3-kS-WCX"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZOa-7y-Ic7" secondAttribute="trailing" constant="8" id="OAA-v6-gIr"/>
+                                                <constraint firstItem="ZOa-7y-Ic7" firstAttribute="leading" secondItem="W00-94-ylP" secondAttribute="leading" constant="8" id="XOu-eF-QGW"/>
+                                                <constraint firstItem="ZOa-7y-Ic7" firstAttribute="top" secondItem="0Rz-sC-hTw" secondAttribute="bottom" id="bca-Rj-fl9"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Rz-sC-hTw" secondAttribute="trailing" constant="8" id="nu5-Lk-LbO"/>
                                             </constraints>
                                         </view>
                                     </subviews>
