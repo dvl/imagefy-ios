@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513461CF03CFD0096CB65 /* AppDelegate.swift */; };
-		BBD513491CF03CFD0096CB65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513481CF03CFD0096CB65 /* ViewController.swift */; };
-		BBD5134C1CF03CFD0096CB65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD5134A1CF03CFD0096CB65 /* Main.storyboard */; };
-		BBD5134F1CF03CFD0096CB65 /* imagefy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBD5134D1CF03CFD0096CB65 /* imagefy.xcdatamodeld */; };
-		BBD513511CF03CFD0096CB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD513501CF03CFD0096CB65 /* Assets.xcassets */; };
-		BBD513541CF03CFD0096CB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD513521CF03CFD0096CB65 /* LaunchScreen.storyboard */; };
 		BBD5135F1CF03CFD0096CB65 /* imagefyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5135E1CF03CFD0096CB65 /* imagefyTests.swift */; };
 		BBD5136A1CF03CFD0096CB65 /* imagefyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513691CF03CFD0096CB65 /* imagefyUITests.swift */; };
+		BBD513811CF042200096CB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD513781CF042200096CB65 /* Assets.xcassets */; };
+		BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBD5137E1CF042200096CB65 /* imagefy.xcdatamodeld */; };
+		BBD513851CF042200096CB65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBD513801CF042200096CB65 /* Info.plist */; };
+		BBD5138A1CF0429C0096CB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD513881CF0429C0096CB65 /* LaunchScreen.storyboard */; };
+		BBD5138B1CF0429C0096CB65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD513891CF0429C0096CB65 /* Main.storyboard */; };
+		BBD5138E1CF042CB0096CB65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5138D1CF042CB0096CB65 /* ViewController.swift */; };
+		BBD513901CF043CF0096CB65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD5138F1CF043CF0096CB65 /* UIKit.framework */; };
+		BBD513931CF043DA0096CB65 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD513911CF043DA0096CB65 /* CoreFoundation.framework */; };
+		BBD513941CF043DA0096CB65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD513921CF043DA0096CB65 /* Foundation.framework */; };
+		BBD513961CF043E50096CB65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD513951CF043E50096CB65 /* SystemConfiguration.framework */; };
+		C30168BE288E4AC60D1A3509 /* Pods_imagefyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378B1E73B30A54583E667B9C /* Pods_imagefyUITests.framework */; };
+		E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */; };
+		F0C42AFC6346E22D35C12F82 /* Pods_imagefyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +43,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01428FC79C3D4673A1C036EE /* Pods-imagefy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefy/Pods-imagefy.debug.xcconfig"; sourceTree = "<group>"; };
+		1121B5378564248806911F1D /* Pods-imagefyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		378B1E73B30A54583E667B9C /* Pods_imagefyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD513431CF03CF90096CB65 /* imagefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD513461CF03CFD0096CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBD513481CF03CFD0096CB65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BBD5134B1CF03CFD0096CB65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BBD5134E1CF03CFD0096CB65 /* imagefy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = imagefy.xcdatamodel; sourceTree = "<group>"; };
-		BBD513501CF03CFD0096CB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		BBD513531CF03CFD0096CB65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BBD513551CF03CFD0096CB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		BBD5135A1CF03CFD0096CB65 /* imagefyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imagefyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD5135E1CF03CFD0096CB65 /* imagefyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagefyTests.swift; sourceTree = "<group>"; };
 		BBD513601CF03CFD0096CB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBD513651CF03CFD0096CB65 /* imagefyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imagefyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD513691CF03CFD0096CB65 /* imagefyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagefyUITests.swift; sourceTree = "<group>"; };
 		BBD5136B1CF03CFD0096CB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD513781CF042200096CB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBD5137F1CF042200096CB65 /* imagefy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = imagefy.xcdatamodel; sourceTree = "<group>"; };
+		BBD513801CF042200096CB65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD513881CF0429C0096CB65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBD513891CF0429C0096CB65 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BBD5138D1CF042CB0096CB65 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBD5138F1CF043CF0096CB65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BBD513911CF043DA0096CB65 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		BBD513921CF043DA0096CB65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BBD513951CF043E50096CB65 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefy/Pods-imagefy.release.xcconfig"; sourceTree = "<group>"; };
+		C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD513961CF043E50096CB65 /* SystemConfiguration.framework in Frameworks */,
+				BBD513931CF043DA0096CB65 /* CoreFoundation.framework in Frameworks */,
+				BBD513941CF043DA0096CB65 /* Foundation.framework in Frameworks */,
+				BBD513901CF043CF0096CB65 /* UIKit.framework in Frameworks */,
+				E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C42AFC6346E22D35C12F82 /* Pods_imagefyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +97,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30168BE288E4AC60D1A3509 /* Pods_imagefyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA76D77E7198D3F5869DB17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01428FC79C3D4673A1C036EE /* Pods-imagefy.debug.xcconfig */,
+				C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */,
+				514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */,
+				C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */,
+				8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */,
+				1121B5378564248806911F1D /* Pods-imagefyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39DC223007E308A4CDC6F9BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBD513951CF043E50096CB65 /* SystemConfiguration.framework */,
+				BBD513911CF043DA0096CB65 /* CoreFoundation.framework */,
+				BBD513921CF043DA0096CB65 /* Foundation.framework */,
+				BBD5138F1CF043CF0096CB65 /* UIKit.framework */,
+				3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */,
+				50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */,
+				378B1E73B30A54583E667B9C /* Pods_imagefyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBD5133A1CF03CF90096CB65 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +138,8 @@
 				BBD5135D1CF03CFD0096CB65 /* imagefyTests */,
 				BBD513681CF03CFD0096CB65 /* imagefyUITests */,
 				BBD513441CF03CF90096CB65 /* Products */,
+				0AA76D77E7198D3F5869DB17 /* Pods */,
+				39DC223007E308A4CDC6F9BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +156,10 @@
 		BBD513451CF03CFD0096CB65 /* imagefy */ = {
 			isa = PBXGroup;
 			children = (
-				BBD513771CF03D180096CB65 /* Supporting Files */,
 				BBD513461CF03CFD0096CB65 /* AppDelegate.swift */,
-				BBD513481CF03CFD0096CB65 /* ViewController.swift */,
+				BBD5138C1CF042C20096CB65 /* Classes */,
+				BBD513871CF0429C0096CB65 /* Storyboard */,
+				BBD513771CF03D180096CB65 /* Supporting Files */,
 			);
 			path = imagefy;
 			sourceTree = "<group>";
@@ -127,13 +185,28 @@
 		BBD513771CF03D180096CB65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BBD5134A1CF03CFD0096CB65 /* Main.storyboard */,
-				BBD513501CF03CFD0096CB65 /* Assets.xcassets */,
-				BBD513521CF03CFD0096CB65 /* LaunchScreen.storyboard */,
-				BBD513551CF03CFD0096CB65 /* Info.plist */,
-				BBD5134D1CF03CFD0096CB65 /* imagefy.xcdatamodeld */,
+				BBD513781CF042200096CB65 /* Assets.xcassets */,
+				BBD5137E1CF042200096CB65 /* imagefy.xcdatamodeld */,
+				BBD513801CF042200096CB65 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBD513871CF0429C0096CB65 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BBD513881CF0429C0096CB65 /* LaunchScreen.storyboard */,
+				BBD513891CF0429C0096CB65 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BBD5138C1CF042C20096CB65 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BBD5138D1CF042CB0096CB65 /* ViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBD5136E1CF03CFD0096CB65 /* Build configuration list for PBXNativeTarget "imagefy" */;
 			buildPhases = (
+				FE89E20792CDA69E32CA9085 /* 📦 Check Pods Manifest.lock */,
 				BBD5133F1CF03CF90096CB65 /* Sources */,
 				BBD513401CF03CF90096CB65 /* Frameworks */,
 				BBD513411CF03CF90096CB65 /* Resources */,
+				AA6826F719B9D3568C60EBE4 /* 📦 Embed Pods Frameworks */,
+				87ADE93D811611DB1BE5C1EB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBD513711CF03CFD0096CB65 /* Build configuration list for PBXNativeTarget "imagefyTests" */;
 			buildPhases = (
+				F1724D206CA14B89BD0D0A24 /* 📦 Check Pods Manifest.lock */,
 				BBD513561CF03CFD0096CB65 /* Sources */,
 				BBD513571CF03CFD0096CB65 /* Frameworks */,
 				BBD513581CF03CFD0096CB65 /* Resources */,
+				FCF9016D0B70E04CFE7AF8B3 /* 📦 Embed Pods Frameworks */,
+				EDBEA7D34CB04FA886F04AC0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBD513741CF03CFD0096CB65 /* Build configuration list for PBXNativeTarget "imagefyUITests" */;
 			buildPhases = (
+				E293F893198C518FB381A5AA /* 📦 Check Pods Manifest.lock */,
 				BBD513611CF03CFD0096CB65 /* Sources */,
 				BBD513621CF03CFD0096CB65 /* Frameworks */,
 				BBD513631CF03CFD0096CB65 /* Resources */,
+				F5FE6F9C38B8FA004553F370 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,9 +321,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD513541CF03CFD0096CB65 /* LaunchScreen.storyboard in Resources */,
-				BBD513511CF03CFD0096CB65 /* Assets.xcassets in Resources */,
-				BBD5134C1CF03CFD0096CB65 /* Main.storyboard in Resources */,
+				BBD5138A1CF0429C0096CB65 /* LaunchScreen.storyboard in Resources */,
+				BBD513851CF042200096CB65 /* Info.plist in Resources */,
+				BBD513811CF042200096CB65 /* Assets.xcassets in Resources */,
+				BBD5138B1CF0429C0096CB65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,13 +344,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87ADE93D811611DB1BE5C1EB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagefy/Pods-imagefy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA6826F719B9D3568C60EBE4 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagefy/Pods-imagefy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E293F893198C518FB381A5AA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDBEA7D34CB04FA886F04AC0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1724D206CA14B89BD0D0A24 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5FE6F9C38B8FA004553F370 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF9016D0B70E04CFE7AF8B3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE89E20792CDA69E32CA9085 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BBD5133F1CF03CF90096CB65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD5134F1CF03CFD0096CB65 /* imagefy.xcdatamodeld in Sources */,
-				BBD513491CF03CFD0096CB65 /* ViewController.swift in Sources */,
+				BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */,
+				BBD5138E1CF042CB0096CB65 /* ViewController.swift in Sources */,
 				BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,27 +508,6 @@
 			targetProxy = BBD513661CF03CFD0096CB65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BBD5134A1CF03CFD0096CB65 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BBD5134B1CF03CFD0096CB65 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		BBD513521CF03CFD0096CB65 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BBD513531CF03CFD0096CB65 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BBD5136C1CF03CFD0096CB65 /* Debug */ = {
@@ -411,9 +595,10 @@
 		};
 		BBD5136F1CF03CFD0096CB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01428FC79C3D4673A1C036EE /* Pods-imagefy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = imagefy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhackathon.imagefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +607,10 @@
 		};
 		BBD513701CF03CFD0096CB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = imagefy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhackathon.imagefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +619,7 @@
 		};
 		BBD513721CF03CFD0096CB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = imagefyTests/Info.plist;
@@ -445,6 +632,7 @@
 		};
 		BBD513731CF03CFD0096CB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = imagefyTests/Info.plist;
@@ -457,6 +645,7 @@
 		};
 		BBD513751CF03CFD0096CB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = imagefyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -468,6 +657,7 @@
 		};
 		BBD513761CF03CFD0096CB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1121B5378564248806911F1D /* Pods-imagefyUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = imagefyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -496,6 +686,7 @@
 				BBD513701CF03CFD0096CB65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBD513711CF03CFD0096CB65 /* Build configuration list for PBXNativeTarget "imagefyTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +695,7 @@
 				BBD513731CF03CFD0096CB65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBD513741CF03CFD0096CB65 /* Build configuration list for PBXNativeTarget "imagefyUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,18 +704,18 @@
 				BBD513761CF03CFD0096CB65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BBD5134D1CF03CFD0096CB65 /* imagefy.xcdatamodeld */ = {
+		BBD5137E1CF042200096CB65 /* imagefy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BBD5134E1CF03CFD0096CB65 /* imagefy.xcdatamodel */,
+				BBD5137F1CF042200096CB65 /* imagefy.xcdatamodel */,
 			);
-			currentVersion = BBD5134E1CF03CFD0096CB65 /* imagefy.xcdatamodel */;
-			name = imagefy.xcdatamodeld;
-			path = ../imagefy.xcdatamodeld;
+			currentVersion = BBD5137F1CF042200096CB65 /* imagefy.xcdatamodel */;
+			path = imagefy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

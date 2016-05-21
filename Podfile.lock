@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (3.4.0)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - IQKeyboardManagerSwift (4.0.3)
+  - RNActivityView (0.0.6)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Crashlytics
+  - Fabric
+  - IQKeyboardManagerSwift
+  - RNActivityView
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  IQKeyboardManagerSwift: b6883b720b0e76473692fdc80828442566e1075f
+  RNActivityView: 889126dc047fc6fa10aac88a13ebff677c53bf82
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: ac0e843f44e7c24a5aeeaf4edf229212becc3bf1
+
+COCOAPODS: 1.0.0
