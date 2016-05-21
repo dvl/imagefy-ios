@@ -17,8 +17,10 @@ class TabbarController: UITabBarController {
             let button: UIButton = UIButton(type: .Custom)
             let win:UIWindow = UIApplication.sharedApplication().delegate!.window!!
             
-            button.frame = CGRectMake(0.0, win.frame.size.height - 65, 60, 60)
-            button.layer.cornerRadius = 60/2
+            let size:CGFloat = 65
+            
+            button.frame = CGRectMake(0.0, win.frame.size.height - 55, size, size)
+            button.layer.cornerRadius = size/2
             button.layer.masksToBounds = true
             button.backgroundColor = UIColor.redColor()
             button.tintColor = UIColor.whiteColor()
