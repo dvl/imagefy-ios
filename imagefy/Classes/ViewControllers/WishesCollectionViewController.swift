@@ -44,8 +44,7 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 1
+        return 10
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -65,7 +64,7 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width:CGFloat = self.view.frame.width * 0.95
+        let width:CGFloat = self.view.frame.width * 0.94
         let height:CGFloat = width * 0.6
         
         return CGSizeMake(width, height)
