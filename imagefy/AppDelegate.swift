@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        Fabric.with([Crashlytics.self])
-        
         IQKeyboardManager.sharedManager().enable = true
         
         return true
