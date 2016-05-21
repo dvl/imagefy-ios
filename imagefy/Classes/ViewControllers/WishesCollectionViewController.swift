@@ -51,12 +51,10 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishesCollectionViewCell
     
         cell.productImage.image = UIImage(named: "accoustic_guitar")
-        cell.productImage.clipsToBounds = true
-        cell.clipsToBounds = true
         
-        // Configure the cell
-        UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5)
-        UIDesign.viewCornerRadius(cell.productImage.layer, bounds: cell.productImage.bounds, byRoundingCorners: [.TopRight, .TopLeft], radius: 3.5)
+        UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4))
+        cell.productImage.layer.cornerRadius = 3.5
+        cell.content.layer.cornerRadius = 3.5
         
         return cell
     }
