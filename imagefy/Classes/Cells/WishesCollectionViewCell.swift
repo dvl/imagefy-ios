@@ -11,4 +11,9 @@ import UIKit
 class WishesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var productImage: UIImageView!
+    @IBOutlet var content: UIView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gc-rs-cIh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gc-rs-cIh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -118,10 +118,15 @@
                                     <constraint firstItem="3C3-UA-wa0" firstAttribute="top" secondItem="LHI-FJ-40H" secondAttribute="topMargin" constant="-8" id="H2e-FQ-kRQ"/>
                                     <constraint firstItem="W00-94-ylP" firstAttribute="bottom" secondItem="3C3-UA-wa0" secondAttribute="bottom" id="TJm-dw-Yuj"/>
                                     <constraint firstItem="W00-94-ylP" firstAttribute="top" secondItem="3C3-UA-wa0" secondAttribute="top" id="aO7-6m-37V"/>
+                                    <constraint firstItem="W00-94-ylP" firstAttribute="centerX" secondItem="LHI-FJ-40H" secondAttribute="centerX" id="aS9-Wq-2Hp"/>
+                                    <constraint firstItem="W00-94-ylP" firstAttribute="height" secondItem="LHI-FJ-40H" secondAttribute="height" id="aXN-yG-bsS"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="3C3-UA-wa0" secondAttribute="trailing" constant="-8" id="h17-vI-agW"/>
+                                    <constraint firstItem="W00-94-ylP" firstAttribute="width" secondItem="LHI-FJ-40H" secondAttribute="width" id="otV-vI-MUr"/>
                                     <constraint firstItem="W00-94-ylP" firstAttribute="leading" secondItem="3C3-UA-wa0" secondAttribute="leading" id="prL-FG-2Lb"/>
+                                    <constraint firstItem="W00-94-ylP" firstAttribute="centerY" secondItem="LHI-FJ-40H" secondAttribute="centerY" id="xXU-WI-qs8"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="content" destination="W00-94-ylP" id="nsB-oq-FMC"/>
                                     <outlet property="productImage" destination="3C3-UA-wa0" id="Qau-Xc-hx0"/>
                                 </connections>
                             </collectionViewCell>
