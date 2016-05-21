@@ -17,11 +17,14 @@
 		BBD513851CF042200096CB65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBD513801CF042200096CB65 /* Info.plist */; };
 		BBD5138A1CF0429C0096CB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD513881CF0429C0096CB65 /* LaunchScreen.storyboard */; };
 		BBD5138B1CF0429C0096CB65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD513891CF0429C0096CB65 /* Main.storyboard */; };
-		BBD5138E1CF042CB0096CB65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5138D1CF042CB0096CB65 /* ViewController.swift */; };
 		BBD513901CF043CF0096CB65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD5138F1CF043CF0096CB65 /* UIKit.framework */; };
 		BBD513931CF043DA0096CB65 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD513911CF043DA0096CB65 /* CoreFoundation.framework */; };
 		BBD513941CF043DA0096CB65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD513921CF043DA0096CB65 /* Foundation.framework */; };
 		BBD513961CF043E50096CB65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD513951CF043E50096CB65 /* SystemConfiguration.framework */; };
+		BBD5139B1CF0456B0096CB65 /* WishesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5139A1CF0456B0096CB65 /* WishesCollectionViewController.swift */; };
+		BBD5139E1CF047580096CB65 /* Extesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5139D1CF047580096CB65 /* Extesions.swift */; };
+		BBD513A01CF048480096CB65 /* UIDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5139F1CF048480096CB65 /* UIDesign.swift */; };
+		BBD513A51CF04E130096CB65 /* WishesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */; };
 		C30168BE288E4AC60D1A3509 /* Pods_imagefyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378B1E73B30A54583E667B9C /* Pods_imagefyUITests.framework */; };
 		E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */; };
 		F0C42AFC6346E22D35C12F82 /* Pods_imagefyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */; };
@@ -67,11 +70,14 @@
 		BBD513801CF042200096CB65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBD513881CF0429C0096CB65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBD513891CF0429C0096CB65 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BBD5138D1CF042CB0096CB65 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BBD5138F1CF043CF0096CB65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBD513911CF043DA0096CB65 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		BBD513921CF043DA0096CB65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BBD513951CF043E50096CB65 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BBD5139A1CF0456B0096CB65 /* WishesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesCollectionViewController.swift; sourceTree = "<group>"; };
+		BBD5139D1CF047580096CB65 /* Extesions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extesions.swift; sourceTree = "<group>"; };
+		BBD5139F1CF048480096CB65 /* UIDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDesign.swift; sourceTree = "<group>"; };
+		BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefy/Pods-imagefy.release.xcconfig"; sourceTree = "<group>"; };
 		C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,9 +218,36 @@
 		BBD5138C1CF042C20096CB65 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BBD5138D1CF042CB0096CB65 /* ViewController.swift */,
+				BBD513A31CF04E130096CB65 /* Cells */,
+				BBD513991CF0456B0096CB65 /* ViewControllers */,
+				BBD5139C1CF047580096CB65 /* Extensions */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		BBD513991CF0456B0096CB65 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBD5139A1CF0456B0096CB65 /* WishesCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BBD5139C1CF047580096CB65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBD5139D1CF047580096CB65 /* Extesions.swift */,
+				BBD5139F1CF048480096CB65 /* UIDesign.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BBD513A31CF04E130096CB65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,9 +513,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD5139E1CF047580096CB65 /* Extesions.swift in Sources */,
 				BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */,
-				BBD5138E1CF042CB0096CB65 /* ViewController.swift in Sources */,
+				BBD5139B1CF0456B0096CB65 /* WishesCollectionViewController.swift in Sources */,
 				BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */,
+				BBD513A51CF04E130096CB65 /* WishesCollectionViewCell.swift in Sources */,
+				BBD513A01CF048480096CB65 /* UIDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
