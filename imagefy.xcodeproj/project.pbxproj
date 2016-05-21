@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791F02E01CF0514B00719FF6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791F02DF1CF0514B00719FF6 /* FBSDKLoginKit.framework */; };
+		791F02E21CF0517800719FF6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791F02E11CF0517800719FF6 /* FBSDKCoreKit.framework */; };
 		BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513461CF03CFD0096CB65 /* AppDelegate.swift */; };
 		BBD5135F1CF03CFD0096CB65 /* imagefyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5135E1CF03CFD0096CB65 /* imagefyTests.swift */; };
 		BBD5136A1CF03CFD0096CB65 /* imagefyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513691CF03CFD0096CB65 /* imagefyUITests.swift */; };
@@ -49,6 +51,8 @@
 		3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagefyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		791F02DF1CF0514B00719FF6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		791F02E11CF0517800719FF6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD513431CF03CF90096CB65 /* imagefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD513461CF03CFD0096CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +83,9 @@
 			files = (
 				BBD513961CF043E50096CB65 /* SystemConfiguration.framework in Frameworks */,
 				BBD513931CF043DA0096CB65 /* CoreFoundation.framework in Frameworks */,
+				791F02E01CF0514B00719FF6 /* FBSDKLoginKit.framework in Frameworks */,
 				BBD513941CF043DA0096CB65 /* Foundation.framework in Frameworks */,
+				791F02E21CF0517800719FF6 /* FBSDKCoreKit.framework in Frameworks */,
 				BBD513901CF043CF0096CB65 /* UIKit.framework in Frameworks */,
 				E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */,
 			);
@@ -120,6 +126,8 @@
 		39DC223007E308A4CDC6F9BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				791F02E11CF0517800719FF6 /* FBSDKCoreKit.framework */,
+				791F02DF1CF0514B00719FF6 /* FBSDKLoginKit.framework */,
 				BBD513951CF043E50096CB65 /* SystemConfiguration.framework */,
 				BBD513911CF043DA0096CB65 /* CoreFoundation.framework */,
 				BBD513921CF043DA0096CB65 /* Foundation.framework */,
