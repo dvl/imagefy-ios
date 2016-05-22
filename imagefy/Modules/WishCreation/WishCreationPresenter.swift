@@ -22,10 +22,10 @@ class WishCreationPresenter: WishCreationPresenterProtocol {
 
 extension WishCreationPresenter: WishCreationInteractorOutputProtocol {
     func didCreateWish(wish: Wish) {
-        
+        view?.wishCreationSuccess(wish)
     }
     
     func didFail() {
-        
+        view?.showAlert("Fail", description: "Unknow server error. Try again :)")
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import pop
 import AssetsLibrary
+import RNActivityView
 
 enum CameraSourceType: Int {
     case Camera = 0, Galery
@@ -85,7 +86,8 @@ class PictureViewController: UIViewController, WishCreationViewProtocol {
     
     // MARK: - WishCreationViewProtocol
     func wishCreationSuccess(wish: Wish) {
-        
+        self.view.hideActivityViewWithAfterDelay(2)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func showAlert(title: String, description: String) {
@@ -136,8 +138,8 @@ extension PictureViewController: UIImagePickerControllerDelegate, UINavigationCo
 
 extension PictureViewController: AlmostThereViewDelegate {
     func setupSuccess(model: AlmostThereModelView) {
+        self.view.showActivityViewWithLabel("")
         print("Model - brief: \(model.brief) - value: \(model.priceValue) - image: \(model.productImage)")
         presenter?.sendWish(model.productImage!, description: model.brief, price: Double(model.priceValue))
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
