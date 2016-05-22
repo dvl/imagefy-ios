@@ -50,6 +50,7 @@
                                 <state key="normal" title="Entrar com o Facebook" backgroundImage="btFacebook"/>
                                 <connections>
                                     <action selector="btnLoginFacebookClick:" destination="qOv-DD-D3h" eventType="touchUpInside" id="nKd-qY-dVg"/>
+                                    <segue destination="9Gc-rs-cIh" kind="show" id="JPW-ID-ZAL"/>
                                 </connections>
                             </button>
                         </subviews>
