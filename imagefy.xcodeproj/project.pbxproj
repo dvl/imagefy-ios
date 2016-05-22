@@ -18,7 +18,6 @@
 		792F7FE91CF128650056EC91 /* ProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FE81CF128650056EC91 /* ProfileWireframe.swift */; };
 		792F7FEB1CF1286D0056EC91 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FEA1CF1286D0056EC91 /* ProfileProtocols.swift */; };
 		792F7FED1CF128770056EC91 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FEC1CF128770056EC91 /* ProfileViewController.swift */; };
-		792F7FEF1CF128870056EC91 /* WishCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FEE1CF128870056EC91 /* WishCreationViewController.swift */; };
 		792F7FF11CF128940056EC91 /* WishCreationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FF01CF128940056EC91 /* WishCreationPresenter.swift */; };
 		792F7FF31CF128A00056EC91 /* WishCreationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FF21CF128A00056EC91 /* WishCreationInteractor.swift */; };
 		792F7FF51CF128AC0056EC91 /* WishCreationWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F7FF41CF128AC0056EC91 /* WishCreationWireframe.swift */; };
@@ -105,7 +104,6 @@
 		792F7FE81CF128650056EC91 /* ProfileWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileWireframe.swift; sourceTree = "<group>"; };
 		792F7FEA1CF1286D0056EC91 /* ProfileProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		792F7FEC1CF128770056EC91 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		792F7FEE1CF128870056EC91 /* WishCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishCreationViewController.swift; sourceTree = "<group>"; };
 		792F7FF01CF128940056EC91 /* WishCreationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishCreationPresenter.swift; sourceTree = "<group>"; };
 		792F7FF21CF128A00056EC91 /* WishCreationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishCreationInteractor.swift; sourceTree = "<group>"; };
 		792F7FF41CF128AC0056EC91 /* WishCreationWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishCreationWireframe.swift; sourceTree = "<group>"; };
@@ -152,7 +150,7 @@
 		BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefy/Pods-imagefy.release.xcconfig"; sourceTree = "<group>"; };
 		C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.release.xcconfig"; sourceTree = "<group>"; };
-		E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureViewController.swift; path = Picture/PictureViewController.swift; sourceTree = "<group>"; };
+		E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		E7DB0C311CF1B11E00CACC33 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E7DB0C321CF1B11E00CACC33 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		E7DB0C331CF1B11E00CACC33 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
@@ -254,7 +252,7 @@
 		792F7FD91CF127990056EC91 /* WishCreation */ = {
 			isa = PBXGroup;
 			children = (
-				792F7FEE1CF128870056EC91 /* WishCreationViewController.swift */,
+				E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */,
 				792F7FF01CF128940056EC91 /* WishCreationPresenter.swift */,
 				792F7FF21CF128A00056EC91 /* WishCreationInteractor.swift */,
 				792F7FF41CF128AC0056EC91 /* WishCreationWireframe.swift */,
@@ -412,7 +410,6 @@
 		E78E90DA1CF188EB00A8AD55 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
-				E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */,
 			);
 			name = Picture;
 			sourceTree = "<group>";
@@ -718,7 +715,6 @@
 				BBD5139B1CF0456B0096CB65 /* WishesCollectionViewController.swift in Sources */,
 				BB0E72161CF151C300DED58D /* Consts.swift in Sources */,
 				BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */,
-				792F7FEF1CF128870056EC91 /* WishCreationViewController.swift in Sources */,
 				792F80091CF13C820056EC91 /* StringHelper.swift in Sources */,
 				792F7FFB1CF128CD0056EC91 /* WishListPresenter.swift in Sources */,
 				792F7FDF1CF127D90056EC91 /* LoginPresenter.swift in Sources */,
