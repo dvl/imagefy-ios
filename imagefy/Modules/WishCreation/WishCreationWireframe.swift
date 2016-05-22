@@ -8,6 +8,6 @@
 
 import UIKit
 
-class WishCreationWireframe: NSObject {
+class WishCreationWireframe: WishCreationWireframeProtocol {
 
 }

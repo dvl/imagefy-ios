@@ -8,6 +8,23 @@
 
 import UIKit
 
-class WishCreationPresenter: NSObject {
+class WishCreationPresenter: WishCreationPresenterProtocol {
+    var interactor: WishCreationInteractorInputProtocol?
+    var wireframe: WishCreationWireframeProtocol?
+    var view: WishCreationViewProtocol?
+    
+    func sendWish(image: UIImage, description: String, price: Double) {
+        let wish = Wish(image: image, description: description, price: price)
+        interactor?.createWish(wish)
+    }
+}
 
+extension WishCreationPresenter: WishCreationInteractorOutputProtocol {
+    func didCreateWish(wish: Wish) {
+        
+    }
+    
+    func didFail() {
+        
+    }
 }

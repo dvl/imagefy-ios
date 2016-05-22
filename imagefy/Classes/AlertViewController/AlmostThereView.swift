@@ -10,9 +10,10 @@ import UIKit
 
 class AlmostThereView: UIView {
     
-    let kMaxValue: Float = 2000.0
+    let kMaxValue: Float = 1000.0
     
     @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var contentViewImage: UIView!
     @IBOutlet weak var priceSlide: UISlider!
     @IBOutlet weak var priceLabel: UILabel!
@@ -44,6 +45,9 @@ class AlmostThereView: UIView {
         
         view.productImage.image = productImage
         
+        view.closeButton.setImage(UIImage(named: "ic_close_x")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: .Normal)
+        view.closeButton.tintColor = kSecondaryTextColor
+        
         let internalBorder = CALayer()
         internalBorder.frame = CGRectMake(view.productImage.frame.origin.x-2, view.productImage.frame.origin.y-2, view.productImage.frame.size.width+4, view.productImage.frame.size.height+4)
         internalBorder.borderColor = kAccentColor.CGColor
@@ -61,6 +65,11 @@ class AlmostThereView: UIView {
     }
     
     @IBAction func slidePriceChanged(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func closeAlert(sender: AnyObject) {
+        self.removeFromSuperview()
     }
     
     @IBAction func okAction(sender: UIButton) {

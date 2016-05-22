@@ -95,7 +95,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="14"/>
                                 <inset key="contentEdgeInsets" minX="21" minY="4" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Entrar com o Facebook" backgroundImage="btFacebook"/>
+                                <state key="normal" title="Signin using Facebook" backgroundImage="btFacebook"/>
                                 <connections>
                                     <action selector="btnLoginFacebookClick:" destination="qOv-DD-D3h" eventType="touchUpInside" id="nKd-qY-dVg"/>
                                 </connections>

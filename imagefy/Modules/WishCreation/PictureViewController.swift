@@ -8,18 +8,21 @@
 
 import UIKit
 import pop
+import AssetsLibrary
 
 enum CameraSourceType: Int {
     case Camera = 0, Galery
 }
 
-class PictureViewController: UIViewController {
+class PictureViewController: UIViewController, WishCreationViewProtocol {
 
+    var presenter: WishCreationPresenterProtocol?
     var pictureTaked: UIImage!
+    let picker = UIImagePickerController()
+    
     @IBOutlet var cameraContentView: UIView!
     @IBOutlet var cameraAcessory: UIView!
     @IBOutlet var cameraButton: UIButton!
-    let picker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,7 @@ class PictureViewController: UIViewController {
         picker.cameraViewTransform = CGAffineTransformMakeScale(1.4, 1.4)
         picker.edgesForExtendedLayout = .None
         cameraContentView.addSubview(picker.view)
+        WishCreationConfigurator.configure(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,6 +81,32 @@ class PictureViewController: UIViewController {
     @IBAction func backAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+    // MARK: - WishCreationViewProtocol
+    func wishCreationSuccess(wish: Wish) {
+        
+    }
+    
+    func showAlert(title: String, description: String) {
+    }
+    
+    
+    func wishCreationAlert(image: UIImage) {
+        
+        let almostAlert = AlmostThereView.loadFromNib(image)
+        almostAlert.frame = CGRectMake(self.view.frame.origin.x - 4, self.view.frame.origin.y - 72, self.view.frame.width + 8, self.view.frame.height + 72)
+        
+        almostAlert.delegate = self
+        
+        self.navigationController?.view.addSubview(almostAlert)
+        
+        let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+        spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
+        spring.springBounciness = 20
+        almostAlert.pop_addAnimation(spring, forKey: "size")
+        
+    }
 }
 
 extension PictureViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -84,17 +114,22 @@ extension PictureViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.pictureTaked = chosenImage
             
-            let almostAlert = AlmostThereView.loadFromNib(self.pictureTaked)
-            almostAlert.frame = CGRectMake(self.view.frame.origin.x - 8, self.view.frame.origin.y - 72, self.view.frame.width + 8, self.view.frame.height + 72)
+            self.wishCreationAlert(chosenImage)
             
-            almostAlert.delegate = self
-            
-            self.navigationController?.view.addSubview(almostAlert)
-            
-            let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
-            spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
-            spring.springBounciness = 20
-            almostAlert.pop_addAnimation(spring, forKey: "size")
+        } else if let imageUrl = info[UIImagePickerControllerReferenceURL] as? NSURL{
+            let assetLibrary = ALAssetsLibrary()
+            assetLibrary.assetForURL(imageUrl , resultBlock: { (asset: ALAsset!) -> Void in
+                if let actualAsset = asset as ALAsset? {
+                    let assetRep: ALAssetRepresentation = actualAsset.defaultRepresentation()
+                    let iref = assetRep.fullResolutionImage().takeUnretainedValue()
+                    let image = UIImage(CGImage: iref)
+                    
+                    self.pictureTaked = image
+                    
+                    self.wishCreationAlert(image)
+                }
+                }, failureBlock: { (error) -> Void in
+            })
         }
     }
 }
@@ -102,7 +137,7 @@ extension PictureViewController: UIImagePickerControllerDelegate, UINavigationCo
 extension PictureViewController: AlmostThereViewDelegate {
     func setupSuccess(model: AlmostThereModelView) {
         print("Model - brief: \(model.brief) - value: \(model.priceValue) - image: \(model.productImage)")
-        
+        presenter?.sendWish(model.productImage!, description: model.brief, price: Double(model.priceValue))
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
