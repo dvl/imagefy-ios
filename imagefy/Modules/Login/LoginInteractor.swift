@@ -37,6 +37,6 @@ class LoginInteractor: LoginInteractorInputProtocol {
     }
 }
 
-//extension LoginInteractor: LoginServiceOutputProtocol {
-//    
-//}
+extension LoginInteractor: LoginServiceOutputProtocol {
+    
+}

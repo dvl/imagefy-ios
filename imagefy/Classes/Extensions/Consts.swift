@@ -8,6 +8,9 @@
 
 import Foundation
 
-let kPrimaryColor = UIColor(rgba: "#673AB7" )
-let gtSecondaryColor = UIColor(rgba: "#FF5252")
-let gtYellowColor = UIColor(rgba: "#FFDE00")
+let kPrimaryColor = UIColor(rgba: "#2196F3")
+let kDarkPrimaryColor = UIColor(rgba: "#1976D2")
+let kLightPrimaryColor = UIColor(rgba: "##BBDEFB")
+let kAccentColor = UIColor(rgba: "#FF5252")
+let kSecondaryTextColor = UIColor(rgba: "#727272")
+let kDividerColor = UIColor(rgba: "#B6B6B6")

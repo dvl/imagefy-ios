@@ -33,9 +33,6 @@
 		792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F800A1CF142970056EC91 /* LoginConfigurator.swift */; };
 		BB0E72161CF151C300DED58D /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E72151CF151C300DED58D /* Consts.swift */; };
 		BB0E72181CF152E900DED58D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0E72171CF152E900DED58D /* Default-568h@2x.png */; };
-		BB0E722C1CF158B800DED58D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0E72261CF155BB00DED58D /* FBSDKCoreKit.framework */; };
-		BB0E722D1CF158B800DED58D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0E72271CF155BB00DED58D /* FBSDKLoginKit.framework */; };
-		BB0E722E1CF158B800DED58D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0E72281CF155BB00DED58D /* FBSDKShareKit.framework */; };
 		BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513461CF03CFD0096CB65 /* AppDelegate.swift */; };
 		BBD5135F1CF03CFD0096CB65 /* imagefyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5135E1CF03CFD0096CB65 /* imagefyTests.swift */; };
 		BBD5136A1CF03CFD0096CB65 /* imagefyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513691CF03CFD0096CB65 /* imagefyUITests.swift */; };
@@ -53,6 +50,9 @@
 		BBD513A51CF04E130096CB65 /* WishesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */; };
 		C30168BE288E4AC60D1A3509 /* Pods_imagefyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378B1E73B30A54583E667B9C /* Pods_imagefyUITests.framework */; };
 		E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */; };
+		E78E90C51CF1623100A8AD55 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78E90C21CF1623100A8AD55 /* FBSDKCoreKit.framework */; };
+		E78E90C61CF1623100A8AD55 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78E90C31CF1623100A8AD55 /* FBSDKLoginKit.framework */; };
+		E78E90C71CF1623100A8AD55 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78E90C41CF1623100A8AD55 /* FBSDKShareKit.framework */; };
 		F0C42AFC6346E22D35C12F82 /* Pods_imagefyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,8 +82,6 @@
 		514CF80F5081870D41759E1C /* Pods-imagefyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		791F02E31CF059A900719FF6 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		792A33B21CF06DF100A8C7FE /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
-		792A33B31CF0743800A8C7FE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		792A33B41CF0743800A8C7FE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		792A33B71CF07A8D00A8C7FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		792F7FDC1CF127D00056EC91 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		792F7FDE1CF127D90056EC91 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -105,14 +103,11 @@
 		792F7FFE1CF128E10056EC91 /* WishListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListProtocols.swift; sourceTree = "<group>"; };
 		792F80021CF13B370056EC91 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		792F80061CF13B980056EC91 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		792F80081CF13C820056EC91 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		792F80081CF13C820056EC91 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringHelper.swift; path = ../StringHelper.swift; sourceTree = "<group>"; };
 		792F800A1CF142970056EC91 /* LoginConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0E72151CF151C300DED58D /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		BB0E72171CF152E900DED58D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BB0E72261CF155BB00DED58D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		BB0E72271CF155BB00DED58D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		BB0E72281CF155BB00DED58D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		BBD513431CF03CF90096CB65 /* imagefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD513461CF03CFD0096CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD5135A1CF03CFD0096CB65 /* imagefyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imagefyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +131,9 @@
 		BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefy/Pods-imagefy.release.xcconfig"; sourceTree = "<group>"; };
 		C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.release.xcconfig"; sourceTree = "<group>"; };
+		E78E90C21CF1623100A8AD55 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		E78E90C31CF1623100A8AD55 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		E78E90C41CF1623100A8AD55 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +141,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0E722C1CF158B800DED58D /* FBSDKCoreKit.framework in Frameworks */,
-				BB0E722D1CF158B800DED58D /* FBSDKLoginKit.framework in Frameworks */,
-				BB0E722E1CF158B800DED58D /* FBSDKShareKit.framework in Frameworks */,
+				E78E90C71CF1623100A8AD55 /* FBSDKShareKit.framework in Frameworks */,
 				BBD513961CF043E50096CB65 /* SystemConfiguration.framework in Frameworks */,
+				E78E90C51CF1623100A8AD55 /* FBSDKCoreKit.framework in Frameworks */,
 				BBD513931CF043DA0096CB65 /* CoreFoundation.framework in Frameworks */,
 				BBD513941CF043DA0096CB65 /* Foundation.framework in Frameworks */,
+				E78E90C61CF1623100A8AD55 /* FBSDKLoginKit.framework in Frameworks */,
 				BBD513901CF043CF0096CB65 /* UIKit.framework in Frameworks */,
 				E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */,
 			);
@@ -189,11 +187,9 @@
 		39DC223007E308A4CDC6F9BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB0E72261CF155BB00DED58D /* FBSDKCoreKit.framework */,
-				BB0E72271CF155BB00DED58D /* FBSDKLoginKit.framework */,
-				BB0E72281CF155BB00DED58D /* FBSDKShareKit.framework */,
-				792A33B31CF0743800A8C7FE /* FBSDKCoreKit.framework */,
-				792A33B41CF0743800A8C7FE /* FBSDKLoginKit.framework */,
+				E78E90C21CF1623100A8AD55 /* FBSDKCoreKit.framework */,
+				E78E90C31CF1623100A8AD55 /* FBSDKLoginKit.framework */,
+				E78E90C41CF1623100A8AD55 /* FBSDKShareKit.framework */,
 				BBD513951CF043E50096CB65 /* SystemConfiguration.framework */,
 				BBD513911CF043DA0096CB65 /* CoreFoundation.framework */,
 				BBD513921CF043DA0096CB65 /* Foundation.framework */,
@@ -346,7 +342,6 @@
 				BBD513A31CF04E130096CB65 /* Cells */,
 				BBD513991CF0456B0096CB65 /* ViewControllers */,
 				BBD5139C1CF047580096CB65 /* Extensions */,
-				792F80081CF13C820056EC91 /* StringHelper.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -362,6 +357,7 @@
 		BBD5139C1CF047580096CB65 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				792F80081CF13C820056EC91 /* StringHelper.swift */,
 				BB0E72151CF151C300DED58D /* Consts.swift */,
 				BBD5139D1CF047580096CB65 /* Extesions.swift */,
 				BBD5139F1CF048480096CB65 /* UIDesign.swift */,
@@ -809,6 +805,8 @@
 					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
+					"$(PROJECT_DIR)/imagefy/Supporting",
+					Files/Libs,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -835,6 +833,8 @@
 					"\"${PODS_ROOT}/Crashlytics/iOS\"",
 					"\"${PODS_ROOT}/Fabric/iOS\"",
 					"$(PROJECT_DIR)/imagefy/Supporting",
+					"$(PROJECT_DIR)/imagefy/Supporting",
+					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
