@@ -32,7 +32,8 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func loginSuccess(userId: String) {
-        self.performSegueWithIdentifier("segueMain", sender: nil)
+    func loginSuccess(user: User) {
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.setupInitialView()
     }
 }

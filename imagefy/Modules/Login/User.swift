@@ -15,13 +15,17 @@ class User: NSObject {
     var firstName: String
     var lastName: String
     var imageUrl: String
+    var accessToken: String
+    var userId: String
     
-    init(name: String, email: String, firstName: String, lastName: String, imageUrl: String) {
+    init(name: String, email: String, firstName: String, lastName: String, imageUrl: String, accessToken: String, userId: String) {
         self.name = name
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
         self.imageUrl = imageUrl
+        self.accessToken = accessToken
+        self.userId = userId
     }
 }
 

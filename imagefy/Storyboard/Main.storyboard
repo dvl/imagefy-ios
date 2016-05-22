@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="85s-Jb-int">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gc-rs-cIh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Comfortaa-Bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </mutableArray>
+        <mutableArray key="Comfortaa-Regular.ttf">
+            <string>Comfortaa</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Tabbar Controller-->
         <scene sceneID="gTg-U8-Mt4">
@@ -61,7 +69,7 @@
         <!--Login View Controller-->
         <scene sceneID="du2-nI-aBW">
             <objects>
-                <viewController id="qOv-DD-D3h" customClass="LoginViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qOv-DD-D3h" customClass="LoginViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rGV-0v-wdX"/>
                         <viewControllerLayoutGuide type="bottom" id="nH5-Le-jBC"/>
@@ -99,9 +107,6 @@
                     <navigationItem key="navigationItem" id="s18-6g-RKS"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <segue destination="9Gc-rs-cIh" kind="showDetail" identifier="segueMain" action="showViewController:sender:" id="T0F-HS-L8f"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onn-xE-xW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,7 +168,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="GSH-7D-bzl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -172,7 +177,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="34P-7q-EfT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="15"/>
                                                     <color key="textColor" red="0.32160129520000003" green="0.71085831290000001" blue="0.36629534270000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -224,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="2024" y="-328"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="sBl-Qp-30S">
             <objects>
                 <viewController id="Jza-6i-CdW" customClass="ProfileViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
@@ -260,7 +265,10 @@
                             <constraint firstItem="mXA-Vs-3dv" firstAttribute="top" secondItem="fOU-qq-kh6" secondAttribute="bottom" constant="20" id="tL5-dX-moc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yZn-iq-zLX"/>
+                    <navigationItem key="navigationItem" title="Profile" id="yZn-iq-zLX"/>
+                    <connections>
+                        <outlet property="imgProfile" destination="fOU-qq-kh6" id="AR4-vU-aHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GB-T5-dPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
