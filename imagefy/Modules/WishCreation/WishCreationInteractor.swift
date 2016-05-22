@@ -14,7 +14,7 @@ class WishCreationInteractor: WishCreationInteractorInputProtocol {
     var service: WishCreationServiceProtocol?
     
     func createWish(wish: Wish) {
-        
+        service?.createWish(wish)
     }
 }
 

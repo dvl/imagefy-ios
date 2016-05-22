@@ -13,13 +13,15 @@ enum CameraSourceType: Int {
     case Camera = 0, Galery
 }
 
-class PictureViewController: UIViewController {
+class PictureViewController: UIViewController, WishCreationViewProtocol {
 
+    var presenter: WishCreationPresenterProtocol?
     var pictureTaked: UIImage!
+    let picker = UIImagePickerController()
+    
     @IBOutlet var cameraContentView: UIView!
     @IBOutlet var cameraAcessory: UIView!
     @IBOutlet var cameraButton: UIButton!
-    let picker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class PictureViewController: UIViewController {
         picker.cameraViewTransform = CGAffineTransformMakeScale(1.4, 1.4)
         picker.edgesForExtendedLayout = .None
         cameraContentView.addSubview(picker.view)
+        WishCreationConfigurator.configure(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,6 +80,16 @@ class PictureViewController: UIViewController {
     @IBAction func backAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+    // MARK: - WishCreationViewProtocol
+    func wishCreationSuccess(wish: Wish) {
+        
+    }
+    
+    func showAlert(title: String, description: String) {
+        
+    }
 }
 
 extension PictureViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -102,7 +115,7 @@ extension PictureViewController: UIImagePickerControllerDelegate, UINavigationCo
 extension PictureViewController: AlmostThereViewDelegate {
     func setupSuccess(model: AlmostThereModelView) {
         print("Model - brief: \(model.brief) - value: \(model.priceValue) - image: \(model.productImage)")
-        
+        presenter?.sendWish(model.productImage!, description: model.brief, price: Double(model.priceValue))
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
