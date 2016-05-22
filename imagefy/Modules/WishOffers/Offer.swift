@@ -11,8 +11,12 @@ import UIKit
 class Offer: NSObject {
     
     var productId: String
+    var name: String
+    var price: String
     
-    init(productId: String) {
+    init(productId: String, name: String, price: String) {
         self.productId = productId
+        self.name = name
+        self.price = price
     }
 }

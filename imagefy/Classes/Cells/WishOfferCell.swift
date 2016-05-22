@@ -10,6 +10,9 @@ import UIKit
 
 class WishOfferCell: UICollectionViewCell {
     
+    @IBOutlet weak var imgOffer: UIImageView!
+    @IBOutlet weak var lblProductName: UILabel!
+    @IBOutlet weak var lblProductPrice: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()

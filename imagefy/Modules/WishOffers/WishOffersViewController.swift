@@ -48,11 +48,12 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishOfferCell
         
-//        cell.productImage.image = UIImage(named: "accoustic_guitar")
+        cell.imgOffer.image = UIImage(named: "accoustic_guitar")
+        cell.lblProductName.text = "Acoustic Guitar"
+        cell.lblProductPrice.text = "R$350,00"
         
         UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4))
-//        cell.productImage.layer.cornerRadius = 3.5
-//        cell.content.layer.cornerRadius = 3.5
+        cell.imgOffer.layer.cornerRadius = 3.5
         
         return cell
     }

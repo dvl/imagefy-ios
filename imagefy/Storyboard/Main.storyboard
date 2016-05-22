@@ -8,6 +8,8 @@
     <customFonts key="customFonts">
         <mutableArray key="Comfortaa-Bold.ttf">
             <string>Comfortaa-Bold</string>
+            <string>Comfortaa-Bold</string>
+            <string>Comfortaa-Bold</string>
         </mutableArray>
         <mutableArray key="Comfortaa-Regular.ttf">
             <string>Comfortaa</string>
@@ -259,19 +261,47 @@
                                     <rect key="frame" x="0.0" y="0.0" width="566" height="249"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produto 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efl-Q2-nLf">
-                                            <rect key="frame" x="247" y="114" width="73" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2l2-M7-wyY">
+                                            <rect key="frame" x="0.0" y="0.0" width="566" height="249"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U$350,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tb-sr-jD8">
+                                            <rect key="frame" x="8" y="220" width="550" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="iiM-jm-xHr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acoustic Guitar - 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtX-Y9-vSN">
+                                            <rect key="frame" x="8" y="197" width="550" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="gXz-pG-RjE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="efl-Q2-nLf" firstAttribute="centerY" secondItem="JqN-e6-9yQ" secondAttribute="centerY" id="OgU-Gf-41p"/>
-                                    <constraint firstItem="efl-Q2-nLf" firstAttribute="centerX" secondItem="JqN-e6-9yQ" secondAttribute="centerX" id="PGI-eR-Hx0"/>
+                                    <constraint firstItem="gtX-Y9-vSN" firstAttribute="trailing" secondItem="JqN-e6-9yQ" secondAttribute="trailingMargin" id="1aH-5o-4rF"/>
+                                    <constraint firstItem="2l2-M7-wyY" firstAttribute="leading" secondItem="JqN-e6-9yQ" secondAttribute="leadingMargin" constant="-8" id="4Uw-zT-pcI"/>
+                                    <constraint firstItem="2tb-sr-jD8" firstAttribute="bottom" secondItem="JqN-e6-9yQ" secondAttribute="bottomMargin" id="5x7-zq-yqm"/>
+                                    <constraint firstItem="2tb-sr-jD8" firstAttribute="trailing" secondItem="JqN-e6-9yQ" secondAttribute="trailingMargin" id="6HE-xO-1KR"/>
+                                    <constraint firstItem="2tb-sr-jD8" firstAttribute="leading" secondItem="JqN-e6-9yQ" secondAttribute="leadingMargin" id="6xg-zp-rZp"/>
+                                    <constraint firstItem="2l2-M7-wyY" firstAttribute="top" secondItem="JqN-e6-9yQ" secondAttribute="topMargin" constant="-8" id="FC2-LF-NPg"/>
+                                    <constraint firstItem="gtX-Y9-vSN" firstAttribute="leading" secondItem="JqN-e6-9yQ" secondAttribute="leadingMargin" id="N7h-Dh-HEz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="2l2-M7-wyY" secondAttribute="trailing" constant="-8" id="Oyl-Xh-0zF"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="2l2-M7-wyY" secondAttribute="bottom" constant="-8" id="Ucz-55-G9s"/>
+                                    <constraint firstItem="2tb-sr-jD8" firstAttribute="top" secondItem="gtX-Y9-vSN" secondAttribute="bottom" constant="2" id="VbW-YN-pAo"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imgOffer" destination="2l2-M7-wyY" id="ZvH-hV-Uck"/>
+                                    <outlet property="lblProductName" destination="gtX-Y9-vSN" id="T0y-ZC-ECu"/>
+                                    <outlet property="lblProductPrice" destination="2tb-sr-jD8" id="6ok-Cz-L3i"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

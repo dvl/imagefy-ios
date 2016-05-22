@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewProtocol {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Comfortaa-Bold", size: 15)!]
         
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:UIBarMetrics.Default)
+        
         client = BUYClient(shopDomain: "imagefy.myshopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
         
         setupInitialView()
