@@ -12,6 +12,7 @@ class Wish: NSObject {
     var image: UIImage
     var productDescription: String
     var price: Double
+    var offers: [Offer]?
     
     init(image: UIImage, description: String, price: Double) {
         self.image = image
