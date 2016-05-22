@@ -9,16 +9,10 @@
 import UIKit
 
 class Offer: NSObject {
-    
-    var productId: String
-    var name: String
-    var price: String
-    var salesman: String
-    
-    init(productId: String, name: String, price: String, salesman: String) {
-        self.productId = productId
-        self.name = name
-        self.price = price
-        self.salesman = salesman
-    }
+    var productId: String?
+    var name: String?
+    var price: String?
+    var salesman: String?
+    var image: UIImage?
+    var imageUrl: String?
 }

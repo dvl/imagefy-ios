@@ -18,4 +18,13 @@ class WishOfferCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
     }
+    
+    func setupWithProductId(productId: String, price: String) {
+        myAppDelegate.client.getProductById(productId) { (product, error) in
+            self.imgOffer.loadResourceImageWithUrl(product.images[0].src, placeholder: nil)
+            self.lblProductName.text = product.title
+            self.lblProductPrice.text = "U$ \(price)"
+            self.lblSalesman.text = product.vendor
+        }
+    }
 }

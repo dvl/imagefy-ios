@@ -27,12 +27,19 @@ class WishListService: WishListServiceProtocol {
                     let brief = subJson["brief"].stringValue
                     let price = subJson["buget"].stringValue
                     
-                    for (_, offers):(String, JSON) in subJson["offers"] {
-                        
+                    var offers: [Offer] = []
+                    
+                    for (_, offersJson):(String, JSON) in subJson["offers"] {
+                        let productId = offersJson["shopify_product_id"].stringValue
+                        let offer = Offer()
+                        offer.productId = productId
+                        offers.append(offer)
                     }
                     
                     let wish = Wish(description: brief, price: price)
                     wish.imageUrl = image
+                    wish.offers = offers
+                    
                     wishes.append(wish)
                 }
                 

@@ -63,10 +63,8 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishOfferCell
         
-        cell.imgOffer.image = UIImage(named: "accoustic_guitar")
-        cell.lblProductName.text = "Acoustic Guitar"
-        cell.lblProductPrice.text = "R$350,00"
-        cell.lblSalesman.text = "Imagefy"
+        let offer = offers[indexPath.row]
+        cell.setupWithProductId(offer.productId!, price: offer.price ?? "100")
         
         UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4), masksToBounds: true)
         cell.imgOffer.layer.cornerRadius = 3.5
@@ -75,9 +73,9 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        let offer = offers[indexPath.row]
+        let offer = offers[indexPath.row]
         self.view.showActivityView()
-        myAppDelegate.client.getProductById(/*offer.productId*/ "6682096131") { (product, error) in
+        myAppDelegate.client.getProductById(offer.productId) { (product, error) in
             let vc = self.productViewController()
             vc.loadWithProduct(product) { (success, error) in
                 self.view.hideActivityViewWithAfterDelay(2)
