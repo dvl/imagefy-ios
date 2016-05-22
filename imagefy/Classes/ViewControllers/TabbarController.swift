@@ -25,7 +25,7 @@ class TabbarController: UITabBarController {
             self.button.frame = CGRectMake(0.0, win.frame.size.height - 55, size + 10.0, size)
             self.button.layer.cornerRadius = size/2
             self.button.layer.masksToBounds = true
-            self.button.backgroundColor = gtSecondaryColor
+            self.button.backgroundColor = kAccentColor
             self.button.tintColor = UIColor.whiteColor()
             self.button.center = CGPoint(x:win.center.x , y: self.button.center.y)
             self.button.setImage(UIImage(named: "Camera"), forState: .Normal)
