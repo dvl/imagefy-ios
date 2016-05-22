@@ -104,11 +104,11 @@
             </objects>
             <point key="canvasLocation" x="-134" y="26"/>
         </scene>
-        <!--Wish-->
+        <!--Wishes-->
         <scene sceneID="ew1-DD-Lcx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="siL-x5-f22" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wish" image="ic_gift" selectedImage="ic_gift_unselected" id="upY-ll-Ntg"/>
+                    <tabBarItem key="tabBarItem" title="Wishes" image="ic_gift_unselected" selectedImage="ic_gift" id="upY-ll-Ntg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="rXa-rc-0jw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -242,7 +242,7 @@
         <scene sceneID="Kxh-yx-bSm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W6X-TE-yHA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" selectedImage="ic_profile_unselected" id="Fje-qx-x09"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_profile_unselected" selectedImage="ic_profile" id="Fje-qx-x09"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="gql-8u-VB1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
