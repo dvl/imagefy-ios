@@ -14,25 +14,39 @@ import Crashlytics
 import FBSDKCoreKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewProtocol {
 
     var window: UIWindow?
     var loggedUser: User?
+    var presenter: LoginPresenterProtocol?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         IQKeyboardManager.sharedManager().enable = true
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: kAccentColor], forState:.Selected)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: kAccentColor, NSFontAttributeName: UIFont(name: "Comfortaa-Bold", size: 10)!], forState:.Selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Comfortaa-Bold", size: 10)!], forState:.Normal)
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarPosition: .Any, barMetrics: .Default)
         UINavigationBar.appearance().shadowImage = UIImage()
-        
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Comfortaa", size: 15)!]
+        
+        setupInitialView()
         
         return true
+    }
+    
+    func setupInitialView() {
+        if let key = NSUserDefaults.standardUserDefaults().stringForKey("TokenKey") {
+            LoginConfigurator.configure(self)
+            self.presenter?.getUserByKey(key)
+            
+        } else {
+            let loginViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LoginViewController")
+            self.window?.rootViewController = loginViewController
+        }
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
@@ -127,6 +141,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    // MARK: - LoginPresenter
+    func loginSuccess(user: User) {
+        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
+    }
+    
+    func showAlert(title: String, description: String) {
+        
+    }
+
+    
     func topViewController() -> UIViewController? {
         
         var topViewController = self.window?.rootViewController
@@ -137,6 +161,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return topViewController
     }
-
 }
 

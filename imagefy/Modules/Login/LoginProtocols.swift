@@ -26,7 +26,7 @@ protocol LoginWireframeProtocol : class {
 protocol LoginViewProtocol : class {
     var presenter: LoginPresenterProtocol? { get set }
     func showAlert(title: String, description: String)
-    func loginSuccess(userId: String)
+    func loginSuccess(user: User)
 }
 
 protocol LoginPresenterProtocol : class {
@@ -36,20 +36,28 @@ protocol LoginPresenterProtocol : class {
     var view: LoginViewProtocol? { get set }
     
     func didClickFacebookLoginButton(viewController: UIViewController)
+    func getUserByKey(key: String)
 }
 
 protocol LoginInteractorInputProtocol : class {
     weak var presenter: LoginInteractorOutputProtocol? { get set }
     weak var service: LoginServiceProtocol? { get set }
     func login(viewController: UIViewController)
+    func getUserByKey(key: String)
 }
 
 protocol LoginInteractorOutputProtocol : class {
-    func didLogin(userId: String, token: String, key: String)
+    func didLogin(user: User)
     func didFail(loginError: LoginError)
 }
 
 protocol LoginServiceProtocol: class {
-    weak var interactor: LoginInteractorOutputProtocol? {get set}
+    weak var output: LoginServiceOutputProtocol? {get set}
     func login(userId: String, accessToken: String)
+    func user(key: String)
+}
+
+protocol LoginServiceOutputProtocol: class {
+    func didLogin(user: User)
+    func didFail(error: LoginError)
 }

@@ -18,15 +18,16 @@ class BaseService: NSObject {
     
     private let apiVersion = "v1"
     private let host       = "http://imagefy.herokuapp.com/api"
-    static var key = ""
     
     func get(path:String, offset: Int? = 0, parameters: [String: AnyObject]? = nil, requestBlockCompletion: RequestBlockCompletion) {
         
         let url = path.beginsWith("http") ? path : "\(host)/\(apiVersion)/\(path)"
         
-        let headers = [
-            "Authorization": "Token \(BaseService.key)"
-        ]
+        var headers: [String: String] = ["cache-control": "no-cache"]
+        
+        if let key = NSUserDefaults.standardUserDefaults().stringForKey("TokenKey") {
+            headers["Authorization"] = "Token \(key)"
+        }
         
         Alamofire.request(.GET, url, parameters: parameters, headers: headers)
             .responseJSON { response in

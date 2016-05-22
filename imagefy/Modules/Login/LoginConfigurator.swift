@@ -21,6 +21,6 @@ class LoginConfigurator: NSObject {
         presenter.view = view
         presenter.interactor = interactor
         presenter.wireframe = wireframe
-        service.interactor = interactor
+        service.output = interactor
     }
 }

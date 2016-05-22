@@ -17,11 +17,16 @@ class LoginPresenter: LoginPresenterProtocol {
     func didClickFacebookLoginButton(viewController: UIViewController) {
         interactor?.login(viewController)
     }
+    
+    func getUserByKey(key: String) {
+        interactor?.getUserByKey(key)
+    }
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
-    func didLogin(userId: String, token: String, key: String) {
-        
+    
+    func didLogin(user: User) {
+        self.view?.loginSuccess(user)
     }
     
     func didFail(loginError: LoginError) {

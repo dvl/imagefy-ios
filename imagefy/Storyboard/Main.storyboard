@@ -5,6 +5,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Comfortaa-Bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </mutableArray>
+        <mutableArray key="Comfortaa-Regular.ttf">
+            <string>Comfortaa</string>
+            <string>Comfortaa</string>
+            <string>Comfortaa</string>
+            <string>Comfortaa</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Tabbar Controller-->
         <scene sceneID="gTg-U8-Mt4">
@@ -55,7 +66,7 @@
         <!--Login View Controller-->
         <scene sceneID="du2-nI-aBW">
             <objects>
-                <viewController id="qOv-DD-D3h" customClass="LoginViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qOv-DD-D3h" customClass="LoginViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rGV-0v-wdX"/>
                         <viewControllerLayoutGuide type="bottom" id="nH5-Le-jBC"/>
@@ -121,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="1360" y="-328"/>
         </scene>
-        <!--Imagefy-->
+        <!--Wishes-->
         <scene sceneID="HeE-yI-bBb">
             <objects>
                 <collectionViewController id="MLB-Mb-LIS" customClass="WishesCollectionViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,7 +165,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="GSH-7D-bzl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -163,7 +174,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="34P-7q-EfT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="15"/>
                                                     <color key="textColor" red="0.32160129520000003" green="0.71085831290000001" blue="0.36629534270000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -207,16 +218,18 @@
                             <outlet property="delegate" destination="MLB-Mb-LIS" id="5mo-wn-6iL"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Imagefy" id="uZV-6B-CvK"/>
+                    <navigationItem key="navigationItem" title="Wishes" id="uZV-6B-CvK">
+                        <barButtonItem key="backBarButtonItem" title=" " id="39e-Ol-MyA"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szF-fc-cFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024" y="-328"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="sBl-Qp-30S">
             <objects>
-                <viewController id="Jza-6i-CdW" sceneMemberID="viewController">
+                <viewController id="Jza-6i-CdW" customClass="ProfileViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qPw-yO-kb1"/>
                         <viewControllerLayoutGuide type="bottom" id="hHL-Nu-nKK"/>
@@ -224,9 +237,68 @@
                     <view key="view" contentMode="scaleToFill" id="RXS-MV-jef">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOU-qq-kh6">
+                                <rect key="frame" x="250" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5YN-4u-gVZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="LLL-Rn-glm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJJ-Ee-dGY">
+                                <rect key="frame" x="20" y="140" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Dvg-6w-nX8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-A1-KJ6">
+                                <rect key="frame" x="20" y="163" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ta1-fJ-4pi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dly-Qz-CNs">
+                                <rect key="frame" x="210" y="405" width="180" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.4484389196105073" blue="0.46281292175514455" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iWH-9S-2SP"/>
+                                    <constraint firstAttribute="width" constant="180" id="tbx-Tw-TwT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogoutClick:" destination="Jza-6i-CdW" eventType="touchUpInside" id="PZE-kK-Owo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mZP-A1-KJ6" firstAttribute="top" secondItem="vJJ-Ee-dGY" secondAttribute="bottom" constant="2" id="A38-eX-eui"/>
+                            <constraint firstItem="mZP-A1-KJ6" firstAttribute="leading" secondItem="RXS-MV-jef" secondAttribute="leadingMargin" id="Lge-xL-PuX"/>
+                            <constraint firstItem="mZP-A1-KJ6" firstAttribute="trailing" secondItem="RXS-MV-jef" secondAttribute="trailingMargin" id="MmT-a3-PGP"/>
+                            <constraint firstItem="vJJ-Ee-dGY" firstAttribute="leading" secondItem="RXS-MV-jef" secondAttribute="leadingMargin" id="PAB-EL-CvK"/>
+                            <constraint firstItem="fOU-qq-kh6" firstAttribute="top" secondItem="qPw-yO-kb1" secondAttribute="bottom" constant="20" id="bBg-Kp-KDK"/>
+                            <constraint firstItem="dly-Qz-CNs" firstAttribute="centerX" secondItem="RXS-MV-jef" secondAttribute="centerX" id="chd-Fy-IbQ"/>
+                            <constraint firstItem="hHL-Nu-nKK" firstAttribute="top" secondItem="dly-Qz-CNs" secondAttribute="bottom" constant="42" id="fte-NY-7qf"/>
+                            <constraint firstItem="vJJ-Ee-dGY" firstAttribute="top" secondItem="fOU-qq-kh6" secondAttribute="bottom" constant="20" id="fvZ-of-J4H"/>
+                            <constraint firstItem="fOU-qq-kh6" firstAttribute="centerX" secondItem="RXS-MV-jef" secondAttribute="centerX" id="h3J-rz-O6v"/>
+                            <constraint firstItem="vJJ-Ee-dGY" firstAttribute="trailing" secondItem="RXS-MV-jef" secondAttribute="trailingMargin" id="wTp-eU-Aji"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yZn-iq-zLX"/>
+                    <navigationItem key="navigationItem" title="Profile" id="yZn-iq-zLX"/>
+                    <connections>
+                        <outlet property="imgProfile" destination="fOU-qq-kh6" id="AR4-vU-aHE"/>
+                        <outlet property="lblEmail" destination="mZP-A1-KJ6" id="ThJ-k1-tYf"/>
+                        <outlet property="lblUsername" destination="vJJ-Ee-dGY" id="idS-B6-kk9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GB-T5-dPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -395,7 +467,7 @@
     </scenes>
     <resources>
         <image name="Camera" width="30" height="30"/>
-        <image name="back_arrow" width="18" height="32"/>
+        <image name="back_arrow" width="11" height="19"/>
         <image name="btFacebook" width="300" height="51"/>
         <image name="ic_gift" width="25" height="25"/>
         <image name="ic_gift_unselected" width="25" height="25"/>

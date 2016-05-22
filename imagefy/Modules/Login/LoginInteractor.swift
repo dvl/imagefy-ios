@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class LoginInteractor: LoginInteractorInputProtocol, LoginInteractorOutputProtocol {
+class LoginInteractor: LoginInteractorInputProtocol, LoginServiceOutputProtocol {
     
     var presenter: LoginInteractorOutputProtocol?
     var service: LoginServiceProtocol?
@@ -36,25 +36,18 @@ class LoginInteractor: LoginInteractorInputProtocol, LoginInteractorOutputProtoc
         }
     }
     
-    func didLogin(userId: String, token: String, key: String) {
-        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
-            if (error == nil){
-                
-                let dict = result as! NSDictionary
-                let profileImageUrl = dict.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String
-                let name = dict.objectForKey("name") as! String
-                let email = dict.objectForKey("email") as! String
-                let lastName = dict.objectForKey("last_name") as! String
-                let firstName = dict.objectForKey("first_name") as! String
-                
-                let user = User(name: name, email: email, firstName: firstName, lastName: lastName, imageUrl: profileImageUrl)
-                let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                delegate.loggedUser = user
-            }
-        })
+    func getUserByKey(key: String) {
+        service?.user(key)
     }
     
-    func didFail(loginError: LoginError) {
+    func didFail(error: LoginError) {
         
     }
+    
+    func didLogin(user: User) {
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.loggedUser = user
+        self.presenter?.didLogin(user)
+    }
+    
 }
