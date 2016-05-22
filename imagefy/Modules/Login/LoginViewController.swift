@@ -36,4 +36,8 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.setupInitialView()
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 }

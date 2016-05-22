@@ -14,6 +14,7 @@
             <string>Comfortaa</string>
             <string>Comfortaa</string>
             <string>Comfortaa</string>
+            <string>Comfortaa</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -81,11 +82,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11J-vv-PBT">
-                                <rect key="frame" x="160" y="530" width="280" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagefy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-2v-h3X">
+                                <rect key="frame" x="214" y="242" width="173" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="YzW-tv-gy7"/>
-                                    <constraint firstAttribute="width" constant="280" id="uum-je-auq"/>
+                                    <constraint firstAttribute="height" constant="49" id="YT0-F1-5MZ"/>
+                                    <constraint firstAttribute="width" constant="173" id="YbV-9O-nVh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.44843891959999999" blue="0.4628129218" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11J-vv-PBT">
+                                <rect key="frame" x="160" y="308" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="287-bk-Gqt"/>
+                                    <constraint firstAttribute="height" constant="50" id="yrx-NN-Lfj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -97,15 +108,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="11J-vv-PBT" firstAttribute="centerY" secondItem="6lI-vF-Qt8" secondAttribute="centerY" id="Fpr-LA-gF0"/>
-                            <constraint firstItem="11J-vv-PBT" firstAttribute="centerX" secondItem="6lI-vF-Qt8" secondAttribute="centerX" id="lhO-IR-uU4"/>
-                            <constraint firstItem="nH5-Le-jBC" firstAttribute="top" secondItem="11J-vv-PBT" secondAttribute="bottom" constant="20" id="nYz-2S-bKO"/>
+                            <constraint firstItem="11J-vv-PBT" firstAttribute="top" secondItem="Tes-2v-h3X" secondAttribute="bottom" constant="17" id="9GM-oa-eOX"/>
+                            <constraint firstItem="Tes-2v-h3X" firstAttribute="centerY" secondItem="6lI-vF-Qt8" secondAttribute="centerY" constant="-33.5" id="Mjt-p1-dV0"/>
+                            <constraint firstItem="Tes-2v-h3X" firstAttribute="centerX" secondItem="6lI-vF-Qt8" secondAttribute="centerX" id="XCv-2o-8l3"/>
+                            <constraint firstItem="11J-vv-PBT" firstAttribute="centerX" secondItem="6lI-vF-Qt8" secondAttribute="centerX" id="c4G-8N-B4w"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Fpr-LA-gF0"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="s18-6g-RKS"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
