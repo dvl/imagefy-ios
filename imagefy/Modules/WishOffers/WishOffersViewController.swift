@@ -10,7 +10,7 @@ import UIKit
 import Buy
 import DZNEmptyDataSet
 
-private let reuseIdentifier = "WishesCellIdentifier"
+private let reuseIdentifier = "WishOfferCell"
 
 class WishOffersViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -22,6 +22,11 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
         self.title = "Offers"
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let tabbar = self.tabBarController as! TabbarController
+        tabbar.showButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +42,7 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return offers.count
+        return /*offers.count*/ 1
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -52,6 +57,24 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
         return cell
     }
     
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        let offer = offers[indexPath.row]
+        
+        myAppDelegate.client.getProductById(/*offer.productId*/ "6682096131") { (product, error) in
+            let vc = self.productViewController()
+            vc.loadWithProduct(product) { (success, error) in
+                guard error == nil else {
+                    return
+                }
+                
+                let tabbar = self.tabBarController as! TabbarController
+                tabbar.hideButton()
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width:CGFloat = self.view.frame.width * 0.94
@@ -63,6 +86,14 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
     // Margens
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(10, 5, 2, 5)
+    }
+    
+    func productViewController() -> BUYProductViewController {
+        let theme = BUYTheme()
+        theme.style = .Light
+        theme.tintColor = kAccentColor
+        theme.showsProductImageBackground = true
+        return BUYProductViewController(client: myAppDelegate.client, theme: theme)
     }
 }
 

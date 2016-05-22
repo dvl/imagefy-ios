@@ -9,5 +9,10 @@
 import UIKit
 
 class Offer: NSObject {
-
+    
+    var productId: String
+    
+    init(productId: String) {
+        self.productId = productId
+    }
 }

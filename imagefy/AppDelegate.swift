@@ -12,6 +12,7 @@ import IQKeyboardManagerSwift
 import Fabric
 import Crashlytics
 import FBSDKCoreKit
+import Buy
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewProtocol {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewProtocol {
     var window: UIWindow?
     var loggedUser: User?
     var presenter: LoginPresenterProtocol?
+    var client: BUYClient!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -32,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewProtocol {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Comfortaa-Bold", size: 15)!]
+        
+        client = BUYClient(shopDomain: "imagefy.myshopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
         
         setupInitialView()
         

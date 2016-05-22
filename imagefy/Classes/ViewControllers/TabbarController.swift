@@ -52,6 +52,21 @@ class TabbarController: UITabBarController {
         btn1.addTarget(self, action: #selector(TabbarController.didTapExitButton), forControlEvents: .TouchUpInside)
         self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btn1), animated: true);
     }
+    
+    func hideButton() {
+        self.button.hidden = true
+    }
+    
+    func showButton() {
+        self.button.hidden = false
+        let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+        spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
+        spring.springBounciness = 20
+        spring.repeatForever = true
+        spring.autoreverses = true
+        
+        self.button.pop_addAnimation(spring, forKey: "pop")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
