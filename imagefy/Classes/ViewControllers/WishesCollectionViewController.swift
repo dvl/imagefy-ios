@@ -76,6 +76,11 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let client = BUYClient(shopDomain: "imagefy.shopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
+        client.getProductsPage(0) { (products, page, reachedEnd, error) in
+            for product in products {
+                print(product.title)
+            }
+        }
     }
 
     // MARK: UICollectionViewDelegate
