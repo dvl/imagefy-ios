@@ -449,6 +449,7 @@
 				TargetAttributes = {
 					BBD513421CF03CF90096CB65 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZB2FJ674LY;
 					};
 					BBD513591CF03CFD0096CB65 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -790,6 +791,7 @@
 			baseConfigurationReference = 01428FC79C3D4673A1C036EE /* Pods-imagefy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
@@ -817,6 +819,7 @@
 			baseConfigurationReference = C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
