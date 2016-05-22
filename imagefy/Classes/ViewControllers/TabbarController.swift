@@ -44,13 +44,24 @@ class TabbarController: UITabBarController {
         
         self.view!.addSubview(button)
         
-        self.navigationItem.hidesBackButton = true
-        self.navigationController?.navigationItem.hidesBackButton = true
+        let btn1 = UIButton()
+        btn1.setImage(UIImage(named: "logout"), forState: .Normal)
+        btn1.frame = CGRectMake(0, 0, 30, 30)
+        btn1.addTarget(self, action: #selector(TabbarController.didTapExitButton), forControlEvents: .TouchUpInside)
+        self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btn1), animated: true);
+        
+        
+//        self.navigationItem.hidesBackButton = true
+//        self.navigationController?.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func didTapExitButton() {
+        print("exit")
     }
     
     func didTapCameraButton() {

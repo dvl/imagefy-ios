@@ -24,8 +24,8 @@ class LoginService: LoginServiceProtocol {
         service.post(self.pathFacebookLogin, parameters: parameters) { (json, error) in
             if let _json = json {
                 let key = _json["key"].stringValue
-                self.output?.didLogin(accessToken, userId: userId, key: key)
                 NSUserDefaults.standardUserDefaults().setValue(key, forKey: "TokenKey")
+                self.user(key)
             } else {
                 self.output?.didFail(.UnknowError)
                 NSUserDefaults.standardUserDefaults().removeObjectForKey("TokenKey")
@@ -34,8 +34,20 @@ class LoginService: LoginServiceProtocol {
     }
     
     func user(key: String) {
-        service.get(pathUser) { (json, error) in
-            
+        service.get(self.pathUser) { (json, error) in
+            if let _json = json {
+                let firstName = _json["first_name"].stringValue
+                let lastName = _json["last_name"].stringValue
+                let email = _json["email"].stringValue
+                let imageUrl = _json["profile"]["avatar_url"].stringValue
+                
+                let user = User(name: "\(firstName) \(lastName)", email: email, firstName: firstName, lastName: lastName, imageUrl: imageUrl)
+                
+                self.output?.didLogin(user)
+            } else {
+                self.output?.didFail(.UnknowError)
+                NSUserDefaults.standardUserDefaults().removeObjectForKey("TokenKey")
+            }
         }
     }
 }

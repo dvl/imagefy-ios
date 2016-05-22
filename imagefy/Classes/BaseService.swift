@@ -23,7 +23,7 @@ class BaseService: NSObject {
         
         let url = path.beginsWith("http") ? path : "\(host)/\(apiVersion)/\(path)"
         
-        var headers: [String: String] = [:]
+        var headers: [String: String] = ["cache-control": "no-cache"]
         
         if let key = NSUserDefaults.standardUserDefaults().stringForKey("TokenKey") {
             headers["Authorization"] = "Token \(key)"

@@ -58,6 +58,6 @@ protocol LoginServiceProtocol: class {
 }
 
 protocol LoginServiceOutputProtocol: class {
-    func didLogin(token: String, userId: String, key: String)
+    func didLogin(user: User)
     func didFail(error: LoginError)
 }

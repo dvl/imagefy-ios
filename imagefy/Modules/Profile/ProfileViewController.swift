@@ -18,11 +18,8 @@ class ProfileViewController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let user = appDelegate.loggedUser
         
-        imgProfile.loadResourceImageWithUrl(user!.imageUrl, placeholder: nil)
-
+        imgProfile.loadResourceImageWithUrl(user!.imageUrl, placeholder: UIImage(named: "profilePlaceholder"))
         UIDesign.viewCornerRadius(imgProfile.layer, bounds: imgProfile.bounds, byRoundingCorners: .AllCorners, radius: imgProfile.frame.size.width/2)
-        UIDesign.viewShadowPath(imgProfile.layer, bounds: imgProfile.bounds, radius: imgProfile.frame.size.width/2, shadowOffset: CGSize(width: 10, height: 40))
-        
     }
 
     override func didReceiveMemoryWarning() {
