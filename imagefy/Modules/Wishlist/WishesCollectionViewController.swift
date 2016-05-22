@@ -8,6 +8,7 @@
 
 import UIKit
 import Buy
+import DZNEmptyDataSet
 
 private let reuseIdentifier = "WishesCellIdentifier"
 
@@ -18,6 +19,8 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
+        self.collectionView?.emptyDataSetSource = self
+        self.collectionView?.emptyDataSetDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,7 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 0
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -112,4 +115,31 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     }
     */
 
+}
+
+extension WishesCollectionViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func emptyDataSetDidTapView(scrollView: UIScrollView!) {
+        
+    }
+    
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "empty")
+    }
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "Imagefy"
+        let attributes = [NSFontAttributeName: UIFont(name: "Comfortaa", size: 18)!, NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+        return NSAttributedString(string: text, attributes: attributes)
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "Your wish list is empty!"
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineBreakMode = .ByWordWrapping
+        paragraph.alignment = .Center
+        
+        let attributes = [NSFontAttributeName: UIFont(name: "Comfortaa", size: 15)!, NSForegroundColorAttributeName: UIColor.lightGrayColor(), NSParagraphStyleAttributeName: paragraph]
+        
+        return NSAttributedString(string: text, attributes: attributes)
+    }
 }
