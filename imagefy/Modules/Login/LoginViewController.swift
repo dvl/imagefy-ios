@@ -18,8 +18,8 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         super.viewDidLoad()
         LoginConfigurator.configure(self)
         
-        logo.image = UIImage(named: "ic_logo")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        logo.tintColor = kSecondaryTextColor
+//        logo.image = UIImage(named: "ic_logo")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+//        logo.tintColor = kSecondaryTextColor
     }
 
     override func didReceiveMemoryWarning() {
