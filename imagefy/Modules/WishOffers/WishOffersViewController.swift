@@ -118,7 +118,7 @@ extension WishOffersViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelega
     }
     
     func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-        let text = "We didn't found your product yet"
+        let text = "We have not found offers for you yet"
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineBreakMode = .ByWordWrapping
         paragraph.alignment = .Center
