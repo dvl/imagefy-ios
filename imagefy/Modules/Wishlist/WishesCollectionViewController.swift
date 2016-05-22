@@ -12,9 +12,10 @@ import DZNEmptyDataSet
 
 private let reuseIdentifier = "WishesCellIdentifier"
 
-class WishesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class WishesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, WishListViewProtocol {
 
     var wishes: [Wish] = []
+    var presenter: WishListPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,9 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
          self.clearsSelectionOnViewWillAppear = false
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
+        
+        WishListConfigurator.configure(self)
+        presenter?.getWishes()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,13 +50,14 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1 //wishes.count
+        return wishes.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishesCollectionViewCell
+        let wish = wishes[indexPath.row]
         
-        cell.setupViewCell("http://www.guitarworld.com/sites/default/files/public/styles/article_detail_featured__622x439_/public/easy%20acoustic%20guitar%20songs_1.jpg", frameWidth: self.view.frame.width * 0.94)
+        cell.setupViewCell(wish.imageUrl!, frameWidth: self.view.frame.width * 0.94)
         
         return cell
     }
@@ -78,8 +83,18 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 //                print(product.title)
 //            }
 //        }
-//        let wish = wishes[indexPath.row]
+//        let wish = wishes[indexPath.rowi]
         self.performSegueWithIdentifier("segueOffers", sender: nil)
+    }
+    
+    //MARK: - WishListViewProtocol
+    func showAlert(title: String, description: String) {
+        
+    }
+    
+    func didGetWishes(wishes: [Wish]) {
+        self.wishes = wishes
+        self.collectionView?.reloadData()
     }
 }
 

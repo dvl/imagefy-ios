@@ -33,6 +33,8 @@
 		79B5E0191CF21C7300435035 /* WishOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E0181CF21C7300435035 /* WishOffersViewController.swift */; };
 		79B5E0271CF21D5C00435035 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E0261CF21D5C00435035 /* Offer.swift */; };
 		79B5E0291CF21E1300435035 /* WishOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E0281CF21E1300435035 /* WishOfferCell.swift */; };
+		79B5E02C1CF259AA00435035 /* WishListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E02B1CF259AA00435035 /* WishListService.swift */; };
+		79B5E02E1CF259CE00435035 /* WishListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E02D1CF259CE00435035 /* WishListConfigurator.swift */; };
 		79FC04561CF1717F00FE10E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC04551CF1717F00FE10E5 /* User.swift */; };
 		79FC045A1CF18D2000FE10E5 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */; };
 		79FC045B1CF18D2000FE10E5 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */; };
@@ -122,6 +124,8 @@
 		79B5E0181CF21C7300435035 /* WishOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishOffersViewController.swift; sourceTree = "<group>"; };
 		79B5E0261CF21D5C00435035 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		79B5E0281CF21E1300435035 /* WishOfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishOfferCell.swift; sourceTree = "<group>"; };
+		79B5E02B1CF259AA00435035 /* WishListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListService.swift; sourceTree = "<group>"; };
+		79B5E02D1CF259CE00435035 /* WishListConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListConfigurator.swift; sourceTree = "<group>"; };
 		79FC04551CF1717F00FE10E5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 				792F7FFA1CF128CD0056EC91 /* WishListPresenter.swift */,
 				792F7FFC1CF128D90056EC91 /* WishListWireframe.swift */,
 				792F7FFE1CF128E10056EC91 /* WishListProtocols.swift */,
+				79B5E02B1CF259AA00435035 /* WishListService.swift */,
+				79B5E02D1CF259CE00435035 /* WishListConfigurator.swift */,
 			);
 			path = Wishlist;
 			sourceTree = "<group>";
@@ -725,6 +731,7 @@
 				79FC04621CF1C5EC00FE10E5 /* Wish.swift in Sources */,
 				BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */,
 				79FC04561CF1717F00FE10E5 /* User.swift in Sources */,
+				79B5E02E1CF259CE00435035 /* WishListConfigurator.swift in Sources */,
 				792F80071CF13B980056EC91 /* BaseService.swift in Sources */,
 				792F80031CF13B370056EC91 /* LoginService.swift in Sources */,
 				792F7FE91CF128650056EC91 /* ProfileWireframe.swift in Sources */,
@@ -743,6 +750,7 @@
 				E7DB0C3A1CF1B5AB00CACC33 /* AlmostThereView.swift in Sources */,
 				792F7FEB1CF1286D0056EC91 /* ProfileProtocols.swift in Sources */,
 				E7DB0C3D1CF1D02200CACC33 /* AlmostThereProtocols.swift in Sources */,
+				79B5E02C1CF259AA00435035 /* WishListService.swift in Sources */,
 				792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */,
 				79B5E0271CF21D5C00435035 /* Offer.swift in Sources */,
 				792A33B81CF07A8D00A8C7FE /* LoginViewController.swift in Sources */,

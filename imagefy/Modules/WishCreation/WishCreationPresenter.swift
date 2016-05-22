@@ -14,7 +14,8 @@ class WishCreationPresenter: WishCreationPresenterProtocol {
     var view: WishCreationViewProtocol?
     
     func sendWish(image: UIImage, description: String, price: Double) {
-        let wish = Wish(image: image, description: description, price: price)
+        let wish = Wish(description: description, price: "\(price)")
+        wish.image = image
         interactor?.createWish(wish)
     }
 }

@@ -8,6 +8,21 @@
 
 import UIKit
 
-class WishListInteractor: NSObject {
+class WishListInteractor: WishListInteractorInputProtocol {
+    var presenter: WishListInteractorOutputProtocol?
+    var service: WishListServiceProtocol?
+    
+    func getWishes() {
+        service?.getWishes()
+    }
+}
 
+extension WishListInteractor: WishListServiceOutputProtocol {
+    func didGetWishes(wishes: [Wish]) {
+        presenter?.didGetWishes(wishes)
+    }
+    
+    func didFail(error: WishListError) {
+        presenter?.didFail()
+    }
 }

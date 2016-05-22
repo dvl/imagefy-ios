@@ -8,6 +8,23 @@
 
 import UIKit
 
-class WishListPresenter: NSObject {
+class WishListPresenter: WishListPresenterProtocol {
+    
+    var interactor: WishListInteractorInputProtocol?
+    var wireframe: WishListWireframeProtocol?
+    var view: WishListViewProtocol?
+    
+    func getWishes() {
+        interactor?.getWishes()
+    }
+}
 
+extension WishListPresenter: WishListInteractorOutputProtocol {
+    func didFail() {
+        view?.showAlert("Fail", description: "An error ocurred. Try again.")
+    }
+    
+    func didGetWishes(wishes: [Wish]) {
+        view?.didGetWishes(wishes)
+    }
 }
