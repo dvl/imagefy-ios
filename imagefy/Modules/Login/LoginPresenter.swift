@@ -8,6 +8,23 @@
 
 import UIKit
 
-class LoginPresenter: NSObject {
+class LoginPresenter: LoginPresenterProtocol {
+    
+    var interactor: LoginInteractorInputProtocol?
+    var wireframe: LoginWireframeProtocol?
+    var view: LoginViewProtocol?
+    
+    func didClickFacebookLoginButton(viewController: UIViewController) {
+        interactor?.login(viewController)
+    }
+}
 
+extension LoginPresenter: LoginInteractorOutputProtocol {
+    func didLogin(userId: String) {
+        self.view?.showAlert("Ops!", description: "Login error. Try Again!")
+    }
+    
+    func didFail(loginError: LoginError) {
+        
+    }
 }

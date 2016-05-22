@@ -7,7 +7,36 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class LoginInteractor: NSObject {
+class LoginInteractor: LoginInteractorInputProtocol {
+    
+    var presenter: LoginInteractorOutputProtocol?
+    var service: LoginServiceProtocol?
+    
+    func login(viewController: UIViewController) {
+        let login = FBSDKLoginManager()
+        login.logInWithReadPermissions(["public_profile", "email", "user_birthday", "user_hometown", "user_about_me", "user_photos"], fromViewController: viewController) { (result, error) in
+            guard error == nil else {
+                self.presenter?.didFail(.UnknowError)
+                return
+            }
+            
+            if result.isCancelled {
+                self.presenter?.didFail(.Cancelled)
+            }
+            
+            if((FBSDKAccessToken.currentAccessToken()) != nil){
+                
+                let userId = FBSDKAccessToken.currentAccessToken().userID
+                let token  = FBSDKAccessToken.currentAccessToken().tokenString
+                
+                self.service?.login(userId, accessToken: token)
+            }
+        }
+    }
+}
 
+extension LoginInteractor: LoginServiceOutputProtocol {
+    
 }
