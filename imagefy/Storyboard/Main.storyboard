@@ -11,6 +11,9 @@
         </mutableArray>
         <mutableArray key="Comfortaa-Regular.ttf">
             <string>Comfortaa</string>
+            <string>Comfortaa</string>
+            <string>Comfortaa</string>
+            <string>Comfortaa</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -248,26 +251,59 @@
                                     <constraint firstAttribute="height" constant="100" id="LLL-Rn-glm"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-Vs-3dv">
-                                <rect key="frame" x="0.0" y="140" width="600" height="1"/>
-                                <color key="backgroundColor" red="0.25882352939999997" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJJ-Ee-dGY">
+                                <rect key="frame" x="20" y="140" width="560" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="YGs-vg-Ftz"/>
+                                    <constraint firstAttribute="height" constant="21" id="Dvg-6w-nX8"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-A1-KJ6">
+                                <rect key="frame" x="20" y="163" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ta1-fJ-4pi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dly-Qz-CNs">
+                                <rect key="frame" x="210" y="405" width="180" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.4484389196105073" blue="0.46281292175514455" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iWH-9S-2SP"/>
+                                    <constraint firstAttribute="width" constant="180" id="tbx-Tw-TwT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogoutClick:" destination="Jza-6i-CdW" eventType="touchUpInside" id="PZE-kK-Owo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mXA-Vs-3dv" firstAttribute="leading" secondItem="RXS-MV-jef" secondAttribute="leadingMargin" constant="-20" id="JSi-dk-3gF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mXA-Vs-3dv" secondAttribute="trailing" constant="-20" id="Ytw-NK-FU2"/>
+                            <constraint firstItem="mZP-A1-KJ6" firstAttribute="top" secondItem="vJJ-Ee-dGY" secondAttribute="bottom" constant="2" id="A38-eX-eui"/>
+                            <constraint firstItem="mZP-A1-KJ6" firstAttribute="leading" secondItem="RXS-MV-jef" secondAttribute="leadingMargin" id="Lge-xL-PuX"/>
+                            <constraint firstItem="mZP-A1-KJ6" firstAttribute="trailing" secondItem="RXS-MV-jef" secondAttribute="trailingMargin" id="MmT-a3-PGP"/>
+                            <constraint firstItem="vJJ-Ee-dGY" firstAttribute="leading" secondItem="RXS-MV-jef" secondAttribute="leadingMargin" id="PAB-EL-CvK"/>
                             <constraint firstItem="fOU-qq-kh6" firstAttribute="top" secondItem="qPw-yO-kb1" secondAttribute="bottom" constant="20" id="bBg-Kp-KDK"/>
+                            <constraint firstItem="dly-Qz-CNs" firstAttribute="centerX" secondItem="RXS-MV-jef" secondAttribute="centerX" id="chd-Fy-IbQ"/>
+                            <constraint firstItem="hHL-Nu-nKK" firstAttribute="top" secondItem="dly-Qz-CNs" secondAttribute="bottom" constant="42" id="fte-NY-7qf"/>
+                            <constraint firstItem="vJJ-Ee-dGY" firstAttribute="top" secondItem="fOU-qq-kh6" secondAttribute="bottom" constant="20" id="fvZ-of-J4H"/>
                             <constraint firstItem="fOU-qq-kh6" firstAttribute="centerX" secondItem="RXS-MV-jef" secondAttribute="centerX" id="h3J-rz-O6v"/>
-                            <constraint firstItem="mXA-Vs-3dv" firstAttribute="top" secondItem="fOU-qq-kh6" secondAttribute="bottom" constant="20" id="tL5-dX-moc"/>
+                            <constraint firstItem="vJJ-Ee-dGY" firstAttribute="trailing" secondItem="RXS-MV-jef" secondAttribute="trailingMargin" id="wTp-eU-Aji"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="yZn-iq-zLX"/>
                     <connections>
                         <outlet property="imgProfile" destination="fOU-qq-kh6" id="AR4-vU-aHE"/>
+                        <outlet property="lblEmail" destination="mZP-A1-KJ6" id="ThJ-k1-tYf"/>
+                        <outlet property="lblUsername" destination="vJJ-Ee-dGY" id="idS-B6-kk9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GB-T5-dPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
