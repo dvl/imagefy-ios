@@ -10,7 +10,6 @@ import UIKit
 
 class WishesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var productImage: UIImageView!
     @IBOutlet var content: UIView!
     @IBOutlet weak var lblProductBrief: UILabel!
     @IBOutlet weak var lblOffersCount: UILabel!
@@ -24,8 +23,9 @@ class WishesCollectionViewCell: UICollectionViewCell {
         UIDesign.viewShadowPath(self.layer, bounds: self.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4), masksToBounds: false)
         let otherSubContent = UIImageView()
         otherSubContent.contentMode = .ScaleAspectFill
+        otherSubContent.clipsToBounds = true
         otherSubContent.loadResourceImageWithUrl(urlImage, placeholder: nil)
-        let height:CGFloat = frameWidth * 0.15
+        let height:CGFloat = frameWidth * 0.42
         
         otherSubContent.frame = CGRectMake(0, 0, frameWidth, height)
         self.content.addSubview(otherSubContent)

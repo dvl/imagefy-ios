@@ -62,9 +62,9 @@
 		BBD513A51CF04E130096CB65 /* WishesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */; };
 		C30168BE288E4AC60D1A3509 /* Pods_imagefyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378B1E73B30A54583E667B9C /* Pods_imagefyUITests.framework */; };
 		E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECF2D127ADF1F0BFDE4F7CF /* Pods_imagefy.framework */; };
-		E75F1F9C1CF23F5F00B858DD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F1F991CF23F5F00B858DD /* FBSDKCoreKit.framework */; };
-		E75F1F9D1CF23F5F00B858DD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F1F9A1CF23F5F00B858DD /* FBSDKLoginKit.framework */; };
-		E75F1F9E1CF23F5F00B858DD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F1F9B1CF23F5F00B858DD /* FBSDKShareKit.framework */; };
+		E75F1FA21CF2639F00B858DD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F1F9F1CF2639F00B858DD /* FBSDKCoreKit.framework */; };
+		E75F1FA31CF2639F00B858DD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F1FA01CF2639F00B858DD /* FBSDKLoginKit.framework */; };
+		E75F1FA41CF2639F00B858DD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F1FA11CF2639F00B858DD /* FBSDKShareKit.framework */; };
 		E78E90DC1CF188FA00A8AD55 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */; };
 		E7DB0C3A1CF1B5AB00CACC33 /* AlmostThereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB0C381CF1B5AB00CACC33 /* AlmostThereView.swift */; };
 		E7DB0C3B1CF1B5AB00CACC33 /* AlmostThereView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DB0C391CF1B5AB00CACC33 /* AlmostThereView.xib */; };
@@ -160,9 +160,9 @@
 		BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C72AACDE0F73BE0E2B6E7ABA /* Pods-imagefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefy/Pods-imagefy.release.xcconfig"; sourceTree = "<group>"; };
 		C95D1A697F102DBA8353ED0A /* Pods-imagefyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyTests/Pods-imagefyTests.release.xcconfig"; sourceTree = "<group>"; };
-		E75F1F991CF23F5F00B858DD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		E75F1F9A1CF23F5F00B858DD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		E75F1F9B1CF23F5F00B858DD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E75F1F9F1CF2639F00B858DD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		E75F1FA01CF2639F00B858DD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		E75F1FA11CF2639F00B858DD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		E7DB0C381CF1B5AB00CACC33 /* AlmostThereView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlmostThereView.swift; path = AlertViewController/AlmostThereView.swift; sourceTree = "<group>"; };
 		E7DB0C391CF1B5AB00CACC33 /* AlmostThereView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlmostThereView.xib; path = AlertViewController/AlmostThereView.xib; sourceTree = "<group>"; };
@@ -175,12 +175,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75F1F9E1CF23F5F00B858DD /* FBSDKShareKit.framework in Frameworks */,
+				E75F1FA41CF2639F00B858DD /* FBSDKShareKit.framework in Frameworks */,
 				BBD513961CF043E50096CB65 /* SystemConfiguration.framework in Frameworks */,
-				E75F1F9C1CF23F5F00B858DD /* FBSDKCoreKit.framework in Frameworks */,
+				E75F1FA21CF2639F00B858DD /* FBSDKCoreKit.framework in Frameworks */,
 				BBD513931CF043DA0096CB65 /* CoreFoundation.framework in Frameworks */,
 				BBD513941CF043DA0096CB65 /* Foundation.framework in Frameworks */,
-				E75F1F9D1CF23F5F00B858DD /* FBSDKLoginKit.framework in Frameworks */,
+				E75F1FA31CF2639F00B858DD /* FBSDKLoginKit.framework in Frameworks */,
 				BBD513901CF043CF0096CB65 /* UIKit.framework in Frameworks */,
 				E646AF17FE5EB099FE8BD82E /* Pods_imagefy.framework in Frameworks */,
 			);
@@ -221,9 +221,9 @@
 		39DC223007E308A4CDC6F9BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E75F1F991CF23F5F00B858DD /* FBSDKCoreKit.framework */,
-				E75F1F9A1CF23F5F00B858DD /* FBSDKLoginKit.framework */,
-				E75F1F9B1CF23F5F00B858DD /* FBSDKShareKit.framework */,
+				E75F1F9F1CF2639F00B858DD /* FBSDKCoreKit.framework */,
+				E75F1FA01CF2639F00B858DD /* FBSDKLoginKit.framework */,
+				E75F1FA11CF2639F00B858DD /* FBSDKShareKit.framework */,
 				BBD513951CF043E50096CB65 /* SystemConfiguration.framework */,
 				BBD513911CF043DA0096CB65 /* CoreFoundation.framework */,
 				BBD513921CF043DA0096CB65 /* Foundation.framework */,
@@ -919,6 +919,8 @@
 					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
+					"$(PROJECT_DIR)/imagefy/Supporting",
+					Files/Libs,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -950,6 +952,8 @@
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
 					/Users/Guilherme/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/imagefy/Supporting",
+					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
