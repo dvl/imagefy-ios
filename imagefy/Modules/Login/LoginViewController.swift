@@ -13,13 +13,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
 
     @IBAction func btnLoginFacebookClick(sender: AnyObject) {
@@ -33,6 +30,8 @@ class LoginViewController: UIViewController {
                 
             }
             
+            print(FBSDKAccessToken.currentAccessToken().tokenString)
+            
             if((FBSDKAccessToken.currentAccessToken()) != nil){
                 FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                     if (error == nil){
@@ -43,8 +42,6 @@ class LoginViewController: UIViewController {
                     }
                 })
             }
-            
-            
         }
     }
 }
