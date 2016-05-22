@@ -16,6 +16,7 @@ pod 'Crashlytics'
 pod 'pop', '~> 1.0'
 pod 'Mobile-Buy-SDK'
 pod 'Kingfisher', '~> 2.1'
+pod 'DZNEmptyDataSet'
 
   target 'imagefyTests' do
     inherit! :search_paths

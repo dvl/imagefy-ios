@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.0)
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
+  - DZNEmptyDataSet (1.8.1)
   - Fabric (1.6.7)
   - IQKeyboardManagerSwift (4.0.3)
   - Kingfisher (2.4.1)
@@ -13,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
+  - DZNEmptyDataSet
   - Fabric
   - IQKeyboardManagerSwift
   - Kingfisher (~> 2.1)
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   IQKeyboardManagerSwift: b6883b720b0e76473692fdc80828442566e1075f
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
@@ -32,6 +35,6 @@ SPEC CHECKSUMS:
   RNActivityView: 889126dc047fc6fa10aac88a13ebff677c53bf82
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 8ffd85149ed28fdcdfb2662fec7193f29eb4edf2
+PODFILE CHECKSUM: db8363249f6b37e2715ec457f4157bc8713d47c7
 
 COCOAPODS: 1.0.0
