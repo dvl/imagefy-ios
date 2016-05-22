@@ -91,8 +91,9 @@ class PictureViewController: UIViewController, WishCreationViewProtocol {
     }
     
     func showAlert(title: String, description: String) {
+        self.view.showActivityViewWithLabel("An error ocurred. Please, try again.")
+        self.view.hideActivityViewWithAfterDelay(2)
     }
-    
     
     func wishCreationAlert(image: UIImage) {
         

@@ -12,9 +12,14 @@ class LoginViewController: UIViewController, LoginViewProtocol {
 
     var presenter: LoginPresenterProtocol?
     
+    @IBOutlet var logo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         LoginConfigurator.configure(self)
+        
+        logo.image = UIImage(named: "ic_logo")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        logo.tintColor = kSecondaryTextColor
     }
 
     override func didReceiveMemoryWarning() {
