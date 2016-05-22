@@ -30,6 +30,7 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         self.refreshControl.tintColor = kAccentColor
         self.refreshControl.addTarget(self, action: #selector(WishesCollectionViewController.reloadData), forControlEvents: .ValueChanged)
         self.collectionView?.addSubview(self.refreshControl)
+        self.collectionView?.alwaysBounceVertical = true
         
         WishListConfigurator.configure(self)
     }

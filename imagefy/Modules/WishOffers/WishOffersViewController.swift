@@ -29,6 +29,7 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
         self.refreshControl.tintColor = kAccentColor
         self.refreshControl.addTarget(self, action: #selector(WishOffersViewController.reloadData), forControlEvents: .ValueChanged)
         self.collectionView?.addSubview(self.refreshControl)
+        self.collectionView?.alwaysBounceVertical = true
     }
     
     override func viewDidAppear(animated: Bool) {
