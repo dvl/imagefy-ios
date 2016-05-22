@@ -106,7 +106,7 @@
                                     <action selector="btnLoginFacebookClick:" destination="qOv-DD-D3h" eventType="touchUpInside" id="nKd-qY-dVg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteicon" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-s7-v0r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteicon" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-s7-v0r">
                                 <rect key="frame" x="225" y="180" width="150" height="100"/>
                                 <color key="tintColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
