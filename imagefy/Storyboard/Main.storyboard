@@ -222,6 +222,8 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="content" destination="W00-94-ylP" id="nsB-oq-FMC"/>
+                                    <outlet property="lblOffersCount" destination="ZOa-7y-Ic7" id="8ym-L8-M0z"/>
+                                    <outlet property="lblProductBrief" destination="0Rz-sC-hTw" id="N6u-bv-ko7"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
