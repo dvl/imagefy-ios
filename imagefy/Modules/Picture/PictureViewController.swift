@@ -81,14 +81,28 @@ class PictureViewController: UIViewController {
 
 extension PictureViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let chosenImage = info[UIImagePickerControllerEditedImage]
-        
-        
-//        picker.dismissViewControllerAnimated(true, completion: nil)
-        
+        if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.pictureTaked = chosenImage
+            
+            let almostAlert = AlmostThereView.loadFromNib(self.pictureTaked)
+            almostAlert.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - 64, self.view.frame.width, self.view.frame.height + 64)
+            
+            almostAlert.delegate = self
+            
+            self.navigationController?.view.addSubview(almostAlert)
+            
+            let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+            spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
+            spring.springBounciness = 20
+            almostAlert.pop_addAnimation(spring, forKey: "size")
+        }
     }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-//        picker.dismissViewControllerAnimated(true, completion: nil)
+}
+
+extension PictureViewController: AlmostThereViewDelegate {
+    func setupSuccess(model: AlmostThereModelView) {
+        print("Model - brief: \(model.brief) - value: \(model.priceValue) - image: \(model.productImage)")
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
