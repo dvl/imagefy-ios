@@ -43,7 +43,7 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return /*offers.count*/ 1
+        return offers.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
