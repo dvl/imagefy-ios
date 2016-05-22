@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LoginWireframe: NSObject {
+class LoginWireframe: LoginWireframeProtocol {
 
 }

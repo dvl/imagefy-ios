@@ -7,12 +7,14 @@
 //
 
 import UIKit
-import FBSDKLoginKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginViewProtocol {
 
+    var presenter: LoginPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoginConfigurator.configure(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,28 +22,17 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func btnLoginFacebookClick(sender: AnyObject) {
-        let login = FBSDKLoginManager()
-        login.logInWithReadPermissions(["public_profile", "email", "user_birthday", "user_hometown", "user_about_me", "user_photos"], fromViewController: self) { (result, error) in
-            guard error == nil else {
-                return
-            }
-            
-            if result.isCancelled {
-                
-            }
-            
-            print(FBSDKAccessToken.currentAccessToken().tokenString)
-            
-            if((FBSDKAccessToken.currentAccessToken()) != nil){
-                FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
-                    if (error == nil){
-                        let dict = result as! NSDictionary
-                        print(result)
-                        print(dict)
-                        NSLog(dict.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String)
-                    }
-                })
-            }
-        }
+        presenter?.didClickFacebookLoginButton(self)
+    }
+    
+    func showAlert(title: String, description: String) {
+        let alert = UIAlertController(title: title, message: description, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(okAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func loginSuccess(userId: String) {
+        
     }
 }
