@@ -8,6 +8,22 @@
 
 import UIKit
 
-class WishCreationInteractor: NSObject {
+class WishCreationInteractor: WishCreationInteractorInputProtocol {
+    
+    var presenter: WishCreationInteractorOutputProtocol?
+    var service: WishCreationServiceProtocol?
+    
+    func createWish(wish: Wish) {
+        
+    }
+}
 
+extension WishCreationInteractor: WishCreationServiceOutputProtocol {
+    func didCreateWish(wish: Wish) {
+        
+    }
+    
+    func didFail(error: WishCreationError) {
+        
+    }
 }

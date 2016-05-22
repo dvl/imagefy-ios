@@ -14,11 +14,6 @@ public enum LoginError {
     case UnregisteredUsed
 }
 
-protocol LoginInteractorDelegate {
-    func onLoginSuccess()
-    func onLoginError(error: LoginError)
-}
-
 protocol LoginWireframeProtocol : class {
     
 }
