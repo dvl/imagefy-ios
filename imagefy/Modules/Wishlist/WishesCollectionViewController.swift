@@ -19,14 +19,13 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
+        
+        self.clearsSelectionOnViewWillAppear = false
+        
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
         
         WishListConfigurator.configure(self)
-        presenter?.getWishes()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +33,16 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        presenter?.getWishes()
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueOffers" {
             let vc = segue.destinationViewController as! WishOffersViewController
-            vc.offers = []
+            let wish = sender as! Wish
+            
+            vc.offers = wish.offers
         }
     }
 
@@ -58,6 +62,8 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         let wish = wishes[indexPath.row]
         
         cell.setupViewCell(wish.imageUrl!, frameWidth: self.view.frame.width * 0.94)
+        cell.lblProductBrief.text = wish.productDescription
+        cell.lblOffersCount.text = "\(wish.offers.count) Offers"
         
         return cell
     }
@@ -77,14 +83,8 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        let client = BUYClient(shopDomain: "imagefy.myshopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
-//        client.getProductsPage(0) { (products, page, reachedEnd, error) in
-//            for product in products {
-//                print(product.title)
-//            }
-//        }
-//        let wish = wishes[indexPath.rowi]
-        self.performSegueWithIdentifier("segueOffers", sender: nil)
+        let wish = wishes[indexPath.row]
+        self.performSegueWithIdentifier("segueOffers", sender: wish)
     }
     
     //MARK: - WishListViewProtocol

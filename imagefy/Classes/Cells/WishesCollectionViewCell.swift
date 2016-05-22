@@ -12,6 +12,8 @@ class WishesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var content: UIView!
+    @IBOutlet weak var lblProductBrief: UILabel!
+    @IBOutlet weak var lblOffersCount: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()

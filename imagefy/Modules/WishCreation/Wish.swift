@@ -14,7 +14,7 @@ class Wish: NSObject {
     var imageUrl: String?
     var productDescription: String
     var price: String
-    var offers: [Offer]?
+    var offers: [Offer] = []
     
     init(description: String, price: String) {
         self.productDescription = description
