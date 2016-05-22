@@ -54,6 +54,7 @@
 		E78E90D11CF179B900A8AD55 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78E90CE1CF179B900A8AD55 /* FBSDKCoreKit.framework */; };
 		E78E90D21CF179B900A8AD55 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78E90CF1CF179B900A8AD55 /* FBSDKLoginKit.framework */; };
 		E78E90D31CF179B900A8AD55 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78E90D01CF179B900A8AD55 /* FBSDKShareKit.framework */; };
+		E78E90DC1CF188FA00A8AD55 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */; };
 		F0C42AFC6346E22D35C12F82 /* Pods_imagefyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		E78E90CE1CF179B900A8AD55 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E78E90CF1CF179B900A8AD55 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		E78E90D01CF179B900A8AD55 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureViewController.swift; path = Picture/PictureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		792F7FD71CF127710056EC91 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E78E90DA1CF188EB00A8AD55 /* Picture */,
 				792F7FDB1CF127BF0056EC91 /* Login */,
 				792F7FD81CF127990056EC91 /* Profile */,
 				792F7FD91CF127990056EC91 /* WishCreation */,
@@ -374,6 +377,14 @@
 				BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E78E90DA1CF188EB00A8AD55 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */,
+			);
+			name = Picture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792F7FE11CF127E90056EC91 /* LoginWireframe.swift in Sources */,
+				E78E90DC1CF188FA00A8AD55 /* PictureViewController.swift in Sources */,
 				792F7FF91CF128C60056EC91 /* WishListInteractor.swift in Sources */,
 				BBD5139E1CF047580096CB65 /* Extesions.swift in Sources */,
 				BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */,

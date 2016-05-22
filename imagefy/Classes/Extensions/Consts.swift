@@ -8,6 +8,8 @@
 
 import Foundation
 
+let myAppDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
 let kPrimaryColor = UIColor(rgba: "#2196F3")
 let kDarkPrimaryColor = UIColor(rgba: "#1976D2")
 let kLightPrimaryColor = UIColor(rgba: "##BBDEFB")

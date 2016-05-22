@@ -126,6 +126,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func topViewController() -> UIViewController? {
+        
+        var topViewController = self.window?.rootViewController
+        
+        while let viewController = topViewController?.presentedViewController {
+            topViewController = viewController
+        }
+        
+        return topViewController
+    }
 
 }
 

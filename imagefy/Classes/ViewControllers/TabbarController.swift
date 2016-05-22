@@ -39,8 +39,10 @@ class TabbarController: UITabBarController {
         let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
         spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
         spring.springBounciness = 20
+        spring.repeatForever = true
+        spring.autoreverses = true
         
-        self.button.pop_addAnimation(spring, forKey: "sendAnimation")
+        self.button.pop_addAnimation(spring, forKey: "pop")
         
         self.view!.addSubview(button)
     }
@@ -51,48 +53,21 @@ class TabbarController: UITabBarController {
     }
     
     func didTapCameraButton() {
-        let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
-        spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
-        spring.springBounciness = 20
         
-        self.button.pop_addAnimation(spring, forKey: "sendAnimation")
-        
-        
-        let alert = UIAlertController(title: "What is the picture source?", message: nil, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Take a picture", style: UIAlertActionStyle.Default, handler: { (alert) -> Void in
-            self.selectPhoto(false)
+        if self.button.pop_animationForKey("sendAnimation") == nil {
             
-        }))
-        alert.addAction(UIAlertAction(title: "Select a picture in galery row", style: UIAlertActionStyle.Default, handler: { (alert) -> Void in
-            self.selectPhoto(true)
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: { (alert) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-        
-    }
-    
-    
-    func selectPhoto(isPhotoLibrary: Bool) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        picker.sourceType = isPhotoLibrary ? .PhotoLibrary : .Camera
-        self.presentViewController(picker, animated: true, completion: nil)
-    }
-}
-
-extension TabbarController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let chosenImage = info[UIImagePickerControllerEditedImage]
-        
-        
-        picker.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
+            let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+            spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
+            spring.springBounciness = 20
+            
+            
+            if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("navPictureViewController") {
+                
+                if let tabBar = myAppDelegate.topViewController() as? TabbarController,
+                    let navC = tabBar.selectedViewController as? UINavigationController {
+                    navC.presentViewController(vc, animated: true, completion: nil)
+                }
+            }
+        }
     }
 }
