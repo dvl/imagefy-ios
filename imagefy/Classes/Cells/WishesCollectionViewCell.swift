@@ -32,7 +32,7 @@ class WishesCollectionViewCell: UICollectionViewCell {
         
         let height:CGFloat = frameWidth * 0.42
         
-        otherSubContent.frame = CGRectMake(0, 0, frameWidth, height)
+        self.otherSubContent.frame = CGRectMake(0, 0, frameWidth, height)
         self.content.addSubview(otherSubContent)
         self.content.sendSubviewToBack(otherSubContent)
     }
