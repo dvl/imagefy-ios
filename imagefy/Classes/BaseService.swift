@@ -112,7 +112,7 @@ class BaseService: NSObject {
                 upload.validate(statusCode: 200..<300)
                     .validate(contentType: ["application/json"])
                     .response { response in
-                        print(response.1)
+                        requestBlockCompletion(nil, nil)
                 }
             case .Failure(let error):
                 requestBlockCompletion(nil, NSError(domain: "\(error)", code: -1000, userInfo: nil))

@@ -20,10 +20,10 @@ class WishCreationInteractor: WishCreationInteractorInputProtocol {
 
 extension WishCreationInteractor: WishCreationServiceOutputProtocol {
     func didCreateWish(wish: Wish) {
-        
+        self.presenter?.didCreateWish(wish)
     }
     
     func didFail(error: WishCreationError) {
-        
+        self.presenter?.didFail()
     }
 }

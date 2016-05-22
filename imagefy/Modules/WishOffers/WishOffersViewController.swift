@@ -9,6 +9,7 @@
 import UIKit
 import Buy
 import DZNEmptyDataSet
+import RNActivityView
 
 private let reuseIdentifier = "WishOfferCell"
 
@@ -53,7 +54,7 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
         cell.lblProductPrice.text = "R$350,00"
         cell.lblSalesman.text = "Imagefy"
         
-        UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4), masksToBounds: false)
+        UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4), masksToBounds: true)
         cell.imgOffer.layer.cornerRadius = 3.5
         
         return cell
@@ -61,10 +62,11 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 //        let offer = offers[indexPath.row]
-        
+        self.view.showActivityView()
         myAppDelegate.client.getProductById(/*offer.productId*/ "6682096131") { (product, error) in
             let vc = self.productViewController()
             vc.loadWithProduct(product) { (success, error) in
+                self.view.hideActivityViewWithAfterDelay(2)
                 guard error == nil else {
                     return
                 }

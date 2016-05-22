@@ -23,6 +23,8 @@ class WishCreationService: WishCreationServiceProtocol {
                 self.output?.didFail(.ServerError)
                 return
             }
+            
+            self.output?.didCreateWish(wish)
         }
     }
 }
