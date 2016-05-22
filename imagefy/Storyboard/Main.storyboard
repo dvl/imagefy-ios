@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="85s-Jb-int">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gc-rs-cIh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -11,21 +11,52 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Gc-rs-cIh" customClass="TabbarController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="4pD-9C-VVP">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="4pD-9C-VVP">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textTintColor">
+                                <color key="value" red="1" green="0.99362759216589858" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="siL-x5-f22" kind="relationship" relationship="viewControllers" id="4m1-pR-OHd"/>
+                        <segue destination="1tj-Dd-Tap" kind="relationship" relationship="viewControllers" id="Jfc-tm-Yfm"/>
                         <segue destination="W6X-TE-yHA" kind="relationship" relationship="viewControllers" id="yvV-l8-0KE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZH9-wg-duA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="602" y="26"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jqc-rk-k8g">
+            <objects>
+                <viewController id="1tj-Dd-Tap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eyg-Ak-fMz"/>
+                        <viewControllerLayoutGuide type="bottom" id="tgn-mg-BQA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B02-rV-dXD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" id="ueH-fx-XRU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59o-Os-jCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="807"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="du2-nI-aBW">
@@ -50,7 +81,6 @@
                                 <state key="normal" title="Entrar com o Facebook" backgroundImage="btFacebook"/>
                                 <connections>
                                     <action selector="btnLoginFacebookClick:" destination="qOv-DD-D3h" eventType="touchUpInside" id="nKd-qY-dVg"/>
-                                    <segue destination="9Gc-rs-cIh" kind="show" id="JPW-ID-ZAL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,11 +104,11 @@
             </objects>
             <point key="canvasLocation" x="-134" y="26"/>
         </scene>
-        <!--Item1-->
+        <!--Wishes-->
         <scene sceneID="ew1-DD-Lcx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="siL-x5-f22" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item1" id="upY-ll-Ntg"/>
+                    <tabBarItem key="tabBarItem" title="Wishes" image="ic_gift_unselected" selectedImage="ic_gift" id="upY-ll-Ntg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="rXa-rc-0jw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -208,11 +238,11 @@
             </objects>
             <point key="canvasLocation" x="2990" y="423"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Kxh-yx-bSm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W6X-TE-yHA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Fje-qx-x09"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_profile_unselected" selectedImage="ic_profile" id="Fje-qx-x09"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="gql-8u-VB1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -252,5 +282,9 @@
     </scenes>
     <resources>
         <image name="btFacebook" width="300" height="51"/>
+        <image name="ic_gift" width="25" height="25"/>
+        <image name="ic_gift_unselected" width="25" height="25"/>
+        <image name="ic_profile" width="25" height="25"/>
+        <image name="ic_profile_unselected" width="25" height="25"/>
     </resources>
 </document>
