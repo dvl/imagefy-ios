@@ -30,6 +30,9 @@
 		792F80071CF13B980056EC91 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F80061CF13B980056EC91 /* BaseService.swift */; };
 		792F80091CF13C820056EC91 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F80081CF13C820056EC91 /* StringHelper.swift */; };
 		792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F800A1CF142970056EC91 /* LoginConfigurator.swift */; };
+		79B5E0191CF21C7300435035 /* WishOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E0181CF21C7300435035 /* WishOffersViewController.swift */; };
+		79B5E0271CF21D5C00435035 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E0261CF21D5C00435035 /* Offer.swift */; };
+		79B5E0291CF21E1300435035 /* WishOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5E0281CF21E1300435035 /* WishOfferCell.swift */; };
 		79FC04561CF1717F00FE10E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC04551CF1717F00FE10E5 /* User.swift */; };
 		79FC045A1CF18D2000FE10E5 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */; };
 		79FC045B1CF18D2000FE10E5 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */; };
@@ -116,6 +119,9 @@
 		792F80061CF13B980056EC91 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		792F80081CF13C820056EC91 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringHelper.swift; path = ../StringHelper.swift; sourceTree = "<group>"; };
 		792F800A1CF142970056EC91 /* LoginConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		79B5E0181CF21C7300435035 /* WishOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishOffersViewController.swift; sourceTree = "<group>"; };
+		79B5E0261CF21D5C00435035 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		79B5E0281CF21E1300435035 /* WishOfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishOfferCell.swift; sourceTree = "<group>"; };
 		79FC04551CF1717F00FE10E5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 		792F7FD71CF127710056EC91 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				79B5E0171CF21C5F00435035 /* WishOffers */,
 				E78E90DA1CF188EB00A8AD55 /* Picture */,
 				792F7FDB1CF127BF0056EC91 /* Login */,
 				792F7FD81CF127990056EC91 /* Profile */,
@@ -289,6 +296,15 @@
 				79FC04551CF1717F00FE10E5 /* User.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		79B5E0171CF21C5F00435035 /* WishOffers */ = {
+			isa = PBXGroup;
+			children = (
+				79B5E0181CF21C7300435035 /* WishOffersViewController.swift */,
+				79B5E0261CF21D5C00435035 /* Offer.swift */,
+			);
+			path = WishOffers;
 			sourceTree = "<group>";
 		};
 		BBD5133A1CF03CF90096CB65 = {
@@ -403,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD513A41CF04E130096CB65 /* WishesCollectionViewCell.swift */,
+				79B5E0281CF21E1300435035 /* WishOfferCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -714,9 +731,11 @@
 				792F7FF51CF128AC0056EC91 /* WishCreationWireframe.swift in Sources */,
 				BBD5139B1CF0456B0096CB65 /* WishesCollectionViewController.swift in Sources */,
 				BB0E72161CF151C300DED58D /* Consts.swift in Sources */,
+				79B5E0291CF21E1300435035 /* WishOfferCell.swift in Sources */,
 				BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */,
 				792F80091CF13C820056EC91 /* StringHelper.swift in Sources */,
 				792F7FFB1CF128CD0056EC91 /* WishListPresenter.swift in Sources */,
+				79B5E0191CF21C7300435035 /* WishOffersViewController.swift in Sources */,
 				792F7FDF1CF127D90056EC91 /* LoginPresenter.swift in Sources */,
 				792F7FF11CF128940056EC91 /* WishCreationPresenter.swift in Sources */,
 				792F7FED1CF128770056EC91 /* ProfileViewController.swift in Sources */,
@@ -725,6 +744,7 @@
 				792F7FEB1CF1286D0056EC91 /* ProfileProtocols.swift in Sources */,
 				E7DB0C3D1CF1D02200CACC33 /* AlmostThereProtocols.swift in Sources */,
 				792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */,
+				79B5E0271CF21D5C00435035 /* Offer.swift in Sources */,
 				792A33B81CF07A8D00A8C7FE /* LoginViewController.swift in Sources */,
 				BBD513A51CF04E130096CB65 /* WishesCollectionViewCell.swift in Sources */,
 				792F7FFD1CF128D90056EC91 /* WishListWireframe.swift in Sources */,

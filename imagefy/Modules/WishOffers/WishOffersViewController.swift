@@ -1,8 +1,8 @@
 //
-//  WishesCollectionViewController.swift
+//  WishOffersViewController.swift
 //  imagefy
 //
-//  Created by Alan Magalhães Lira on 21/05/16.
+//  Created by Guilherme Augusto on 22/05/16.
 //  Copyright © 2016 Alan M. Lira. All rights reserved.
 //
 
@@ -12,13 +12,13 @@ import DZNEmptyDataSet
 
 private let reuseIdentifier = "WishesCellIdentifier"
 
-class WishesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class WishOffersViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var offers: [Offer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
     }
@@ -28,16 +28,6 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -46,21 +36,20 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return offers.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishesCollectionViewCell
-    
-        cell.productImage.image = UIImage(named: "accoustic_guitar")
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishOfferCell
+        
+//        cell.productImage.image = UIImage(named: "accoustic_guitar")
         
         UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4))
-        cell.productImage.layer.cornerRadius = 3.5
-        cell.content.layer.cornerRadius = 3.5
+//        cell.productImage.layer.cornerRadius = 3.5
+//        cell.content.layer.cornerRadius = 3.5
         
         return cell
     }
-    
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -74,24 +63,15 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(10, 5, 2, 5)
     }
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let client = BUYClient(shopDomain: "imagefy.myshopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
-        client.getProductsPage(0) { (products, page, reachedEnd, error) in
-            for product in products {
-                print(product.title)
-            }
-        }
-    }
 }
 
-extension WishesCollectionViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+extension WishOffersViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     func emptyDataSetDidTapView(scrollView: UIScrollView!) {
         
     }
     
     func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
-        return UIImage(named: "empty")
+        return UIImage(named: "offer")
     }
     
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
@@ -101,7 +81,7 @@ extension WishesCollectionViewController: DZNEmptyDataSetSource, DZNEmptyDataSet
     }
     
     func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-        let text = "Your wish list is empty!"
+        let text = "We didn't found your product yet"
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineBreakMode = .ByWordWrapping
         paragraph.alignment = .Center
@@ -111,3 +91,4 @@ extension WishesCollectionViewController: DZNEmptyDataSetSource, DZNEmptyDataSet
         return NSAttributedString(string: text, attributes: attributes)
     }
 }
+
