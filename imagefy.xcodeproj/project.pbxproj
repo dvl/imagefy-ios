@@ -62,6 +62,10 @@
 		E7DB0C341CF1B11E00CACC33 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DB0C311CF1B11E00CACC33 /* FBSDKCoreKit.framework */; };
 		E7DB0C351CF1B11E00CACC33 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DB0C321CF1B11E00CACC33 /* FBSDKLoginKit.framework */; };
 		E7DB0C361CF1B11E00CACC33 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DB0C331CF1B11E00CACC33 /* FBSDKShareKit.framework */; };
+		E7DB0C3A1CF1B5AB00CACC33 /* AlmostThereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB0C381CF1B5AB00CACC33 /* AlmostThereView.swift */; };
+		E7DB0C3B1CF1B5AB00CACC33 /* AlmostThereView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DB0C391CF1B5AB00CACC33 /* AlmostThereView.xib */; };
+		E7DB0C3D1CF1D02200CACC33 /* AlmostThereProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB0C3C1CF1D02200CACC33 /* AlmostThereProtocols.swift */; };
+		E7DB0C3F1CF1D07F00CACC33 /* AlmostThereModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB0C3E1CF1D07F00CACC33 /* AlmostThereModelView.swift */; };
 		F0C42AFC6346E22D35C12F82 /* Pods_imagefyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5DDD54199FB35DC51816B /* Pods_imagefyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +156,10 @@
 		E7DB0C311CF1B11E00CACC33 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E7DB0C321CF1B11E00CACC33 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		E7DB0C331CF1B11E00CACC33 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "imagefy/Supporting Files/Libs/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E7DB0C381CF1B5AB00CACC33 /* AlmostThereView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlmostThereView.swift; path = AlertViewController/AlmostThereView.swift; sourceTree = "<group>"; };
+		E7DB0C391CF1B5AB00CACC33 /* AlmostThereView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlmostThereView.xib; path = AlertViewController/AlmostThereView.xib; sourceTree = "<group>"; };
+		E7DB0C3C1CF1D02200CACC33 /* AlmostThereProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlmostThereProtocols.swift; path = AlertViewController/AlmostThereProtocols.swift; sourceTree = "<group>"; };
+		E7DB0C3E1CF1D07F00CACC33 /* AlmostThereModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlmostThereModelView.swift; path = AlertViewController/AlmostThereModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,7 +372,8 @@
 		BBD5138C1CF042C20096CB65 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				792F80061CF13B980056EC91 /* BaseService.swift */,
+				E7DB0C401CF1D21E00CACC33 /* Webservice */,
+				E7DB0C371CF1B4A900CACC33 /* AlertViewController */,
 				BBD513A31CF04E130096CB65 /* Cells */,
 				BBD513991CF0456B0096CB65 /* ViewControllers */,
 				BBD5139C1CF047580096CB65 /* Extensions */,
@@ -406,6 +415,25 @@
 				E78E90DB1CF188FA00A8AD55 /* PictureViewController.swift */,
 			);
 			name = Picture;
+			sourceTree = "<group>";
+		};
+		E7DB0C371CF1B4A900CACC33 /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7DB0C381CF1B5AB00CACC33 /* AlmostThereView.swift */,
+				E7DB0C3C1CF1D02200CACC33 /* AlmostThereProtocols.swift */,
+				E7DB0C3E1CF1D07F00CACC33 /* AlmostThereModelView.swift */,
+				E7DB0C391CF1B5AB00CACC33 /* AlmostThereView.xib */,
+			);
+			name = AlertViewController;
+			sourceTree = "<group>";
+		};
+		E7DB0C401CF1D21E00CACC33 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				792F80061CF13B980056EC91 /* BaseService.swift */,
+			);
+			name = Webservice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +556,7 @@
 				BBD513811CF042200096CB65 /* Assets.xcassets in Resources */,
 				BB0E72181CF152E900DED58D /* Default-568h@2x.png in Resources */,
 				BBD5138B1CF0429C0096CB65 /* Main.storyboard in Resources */,
+				E7DB0C3B1CF1B5AB00CACC33 /* AlmostThereView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,13 +725,16 @@
 				792F7FF11CF128940056EC91 /* WishCreationPresenter.swift in Sources */,
 				792F7FED1CF128770056EC91 /* ProfileViewController.swift in Sources */,
 				792F7FF31CF128A00056EC91 /* WishCreationInteractor.swift in Sources */,
+				E7DB0C3A1CF1B5AB00CACC33 /* AlmostThereView.swift in Sources */,
 				792F7FEB1CF1286D0056EC91 /* ProfileProtocols.swift in Sources */,
+				E7DB0C3D1CF1D02200CACC33 /* AlmostThereProtocols.swift in Sources */,
 				792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */,
 				792A33B81CF07A8D00A8C7FE /* LoginViewController.swift in Sources */,
 				BBD513A51CF04E130096CB65 /* WishesCollectionViewCell.swift in Sources */,
 				792F7FFD1CF128D90056EC91 /* WishListWireframe.swift in Sources */,
 				792F7FFF1CF128E10056EC91 /* WishListProtocols.swift in Sources */,
 				BBD513A01CF048480096CB65 /* UIDesign.swift in Sources */,
+				E7DB0C3F1CF1D07F00CACC33 /* AlmostThereModelView.swift in Sources */,
 				792F7FE31CF127F30056EC91 /* LoginProtocols.swift in Sources */,
 				792F7FE71CF1285A0056EC91 /* ProfilePresenter.swift in Sources */,
 				79FC04601CF1C55100FE10E5 /* WishCreationConfigurator.swift in Sources */,

@@ -51,10 +51,6 @@ class TabbarController: UITabBarController {
         btn1.frame = CGRectMake(0, 0, 30, 30)
         btn1.addTarget(self, action: #selector(TabbarController.didTapExitButton), forControlEvents: .TouchUpInside)
         self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btn1), animated: true);
-        
-        
-//        self.navigationItem.hidesBackButton = true
-//        self.navigationController?.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,12 +64,12 @@ class TabbarController: UITabBarController {
     
     func didTapCameraButton() {
         
-        if self.button.pop_animationForKey("sendAnimation") == nil {
+        if self.button.pop_animationForKey("size") == nil {
             
             let spring = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
             spring.velocity = NSValue(CGPoint: CGPointMake(8, 8))
             spring.springBounciness = 20
-            
+            self.button.pop_addAnimation(spring, forKey: "size")
             
             if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("navPictureViewController") {
                 
