@@ -9,13 +9,14 @@
 import UIKit
 
 class Wish: NSObject {
-    var image: UIImage
+    
+    var image: UIImage?
+    var imageUrl: String?
     var productDescription: String
-    var price: Double
+    var price: String
     var offers: [Offer]?
     
-    init(image: UIImage, description: String, price: Double) {
-        self.image = image
+    init(description: String, price: String) {
         self.productDescription = description
         self.price = price
     }
