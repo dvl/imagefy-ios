@@ -46,17 +46,13 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! WishesCollectionViewCell
-    
-        cell.productImage.image = UIImage(named: "accoustic_guitar")
         
-        UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4))
-        cell.productImage.layer.cornerRadius = 3.5
-        cell.content.layer.cornerRadius = 3.5
+        cell.setupViewCell("http://www.guitarworld.com/sites/default/files/public/styles/article_detail_featured__622x439_/public/easy%20acoustic%20guitar%20songs_1.jpg", frameWidth: self.view.frame.width * 0.94)
         
         return cell
     }

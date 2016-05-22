@@ -85,7 +85,7 @@ extension PictureViewController: UIImagePickerControllerDelegate, UINavigationCo
             self.pictureTaked = chosenImage
             
             let almostAlert = AlmostThereView.loadFromNib(self.pictureTaked)
-            almostAlert.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - 64, self.view.frame.width, self.view.frame.height + 64)
+            almostAlert.frame = CGRectMake(self.view.frame.origin.x - 8, self.view.frame.origin.y - 72, self.view.frame.width + 8, self.view.frame.height + 72)
             
             almostAlert.delegate = self
             

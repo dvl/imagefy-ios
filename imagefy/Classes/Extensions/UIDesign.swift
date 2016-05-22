@@ -10,16 +10,15 @@ import UIKit
 
 public class UIDesign {
     
-    class func viewShadowPath(layer: CALayer, bounds: CGRect, radius: CGFloat, shadowOffset: CGSize) {
+    class func viewShadowPath(layer: CALayer, bounds: CGRect, radius: CGFloat, shadowOffset: CGSize, masksToBounds: Bool) {
         
         let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius)
         
-        layer.cornerRadius = radius
-        
-        layer.masksToBounds = false
         layer.shadowColor = UIColor.blackColor().CGColor
         layer.shadowOffset = shadowOffset
         layer.shadowOpacity = 0.4
+        layer.cornerRadius = radius
+        layer.masksToBounds = masksToBounds
         layer.shadowPath = shadowPath.CGPath
     }
     
