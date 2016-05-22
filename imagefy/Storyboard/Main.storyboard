@@ -379,9 +379,9 @@
                             <constraint firstItem="2Uc-05-79Q" firstAttribute="top" secondItem="Bnc-Hs-cSG" secondAttribute="bottom" constant="8" id="f0f-cC-JjY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bnc-Hs-cSG" secondAttribute="trailing" constant="-20" id="f30-qK-ZZW"/>
                             <constraint firstItem="2Uc-05-79Q" firstAttribute="top" secondItem="5wu-Ul-zkX" secondAttribute="bottom" constant="8" id="lbZ-yT-Cqz"/>
-                            <constraint firstItem="Znf-X5-Wt3" firstAttribute="top" secondItem="2Uc-05-79Q" secondAttribute="bottom" constant="8" id="p0U-uq-JKS"/>
                             <constraint firstItem="5wu-Ul-zkX" firstAttribute="top" secondItem="fb4-E6-DuH" secondAttribute="topMargin" id="p3K-pH-XcW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5wu-Ul-zkX" secondAttribute="trailing" constant="-20" id="pdv-BB-KEx"/>
+                            <constraint firstItem="Znf-X5-Wt3" firstAttribute="top" secondItem="2Uc-05-79Q" secondAttribute="bottom" constant="8" id="uJ8-gj-blN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="How is your product ?" id="lg5-S4-xnN">
@@ -390,11 +390,6 @@
                                 <action selector="backAction:" destination="kiE-Lf-sPZ" id="G0i-GC-Uuq"/>
                             </connections>
                         </barButtonItem>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
                         <outlet property="cameraAcessory" destination="Bnc-Hs-cSG" id="6KI-ax-fnN"/>
@@ -461,6 +456,11 @@
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
