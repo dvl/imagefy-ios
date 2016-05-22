@@ -45,7 +45,7 @@ protocol LoginInteractorInputProtocol : class {
 }
 
 protocol LoginInteractorOutputProtocol : class {
-    func didLogin(userId: String)
+    func didLogin(userId: String, token: String, key: String)
     func didFail(loginError: LoginError)
 }
 

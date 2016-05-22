@@ -14,17 +14,21 @@ class LoginService: LoginServiceProtocol {
     var interactor: LoginInteractorOutputProtocol?
     
     private let path = "auth/"
-    private let pathFacebookLogin = "auth/facebook"
+    private let pathFacebookLogin = "auth/facebook/"
     private let service = BaseService()
     static let sharedInstance = LoginService()
     
     func login(userId: String, accessToken: String) {
-        let parameters: [String: AnyObject] = ["access_token": accessToken , "code": userId ]
+        let parameters: [String: AnyObject] = ["access_token": accessToken , "code": userId]
         service.post(self.pathFacebookLogin, parameters: parameters) { (json, error) in
-            
-            self.interactor?.didFail(.UnknowError)
-            self.interactor?.didLogin(userId)
-            
+            if let _json = json {
+                let key = _json["key"].stringValue
+                self.interactor?.didLogin(userId, token: accessToken, key: key)
+                BaseService.key = key
+            } else {
+                self.interactor?.didFail(.UnknowError)
+                BaseService.key = ""
+            }
         }
     }
 }

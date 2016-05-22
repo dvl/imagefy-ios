@@ -31,6 +31,7 @@
 		792F80071CF13B980056EC91 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F80061CF13B980056EC91 /* BaseService.swift */; };
 		792F80091CF13C820056EC91 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F80081CF13C820056EC91 /* StringHelper.swift */; };
 		792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F800A1CF142970056EC91 /* LoginConfigurator.swift */; };
+		79FC04561CF1717F00FE10E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC04551CF1717F00FE10E5 /* User.swift */; };
 		BB0E72161CF151C300DED58D /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E72151CF151C300DED58D /* Consts.swift */; };
 		BB0E72181CF152E900DED58D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0E72171CF152E900DED58D /* Default-568h@2x.png */; };
 		BB0E722C1CF158B800DED58D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0E72261CF155BB00DED58D /* FBSDKCoreKit.framework */; };
@@ -107,6 +108,7 @@
 		792F80061CF13B980056EC91 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		792F80081CF13C820056EC91 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		792F800A1CF142970056EC91 /* LoginConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		79FC04551CF1717F00FE10E5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0E72151CF151C300DED58D /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		BB0E72171CF152E900DED58D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				792F7FE21CF127F30056EC91 /* LoginProtocols.swift */,
 				792F80021CF13B370056EC91 /* LoginService.swift */,
 				792F800A1CF142970056EC91 /* LoginConfigurator.swift */,
+				79FC04551CF1717F00FE10E5 /* User.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				792F7FF91CF128C60056EC91 /* WishListInteractor.swift in Sources */,
 				BBD5139E1CF047580096CB65 /* Extesions.swift in Sources */,
 				BBD513841CF042200096CB65 /* imagefy.xcdatamodeld in Sources */,
+				79FC04561CF1717F00FE10E5 /* User.swift in Sources */,
 				792F80071CF13B980056EC91 /* BaseService.swift in Sources */,
 				792F80031CF13B370056EC91 /* LoginService.swift in Sources */,
 				792F7FE91CF128650056EC91 /* ProfileWireframe.swift in Sources */,

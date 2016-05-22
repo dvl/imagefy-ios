@@ -20,11 +20,11 @@ class LoginPresenter: LoginPresenterProtocol {
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
-    func didLogin(userId: String) {
-        self.view?.showAlert("Ops!", description: "Login error. Try Again!")
+    func didLogin(userId: String, token: String, key: String) {
+        
     }
     
     func didFail(loginError: LoginError) {
-        
+        self.view?.showAlert("Ops!", description: "Login error. Try Again!")
     }
 }

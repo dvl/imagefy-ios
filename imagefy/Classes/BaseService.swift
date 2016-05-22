@@ -18,12 +18,17 @@ class BaseService: NSObject {
     
     private let apiVersion = "v1"
     private let host       = "http://imagefy.herokuapp.com/api"
+    static var key = ""
     
     func get(path:String, offset: Int? = 0, parameters: [String: AnyObject]? = nil, requestBlockCompletion: RequestBlockCompletion) {
         
         let url = path.beginsWith("http") ? path : "\(host)/\(apiVersion)/\(path)"
         
-        Alamofire.request(.GET, url, parameters: parameters)
+        let headers = [
+            "Authorization": "Token \(BaseService.key)"
+        ]
+        
+        Alamofire.request(.GET, url, parameters: parameters, headers: headers)
             .responseJSON { response in
                 
                 switch response.result {
@@ -42,7 +47,12 @@ class BaseService: NSObject {
         
         let url = path.beginsWith("http") ? path : "\(host)/\(apiVersion)/\(path)"
         
-        Alamofire.request(.POST, url, parameters: parameters)
+        let headers = [
+            "content-type": "application/json",
+            "cache-control": "no-cache"
+        ]
+        
+        Alamofire.request(.POST, url, parameters: parameters, encoding: .JSON, headers: headers)
             .responseJSON { response in
                 
                 switch response.result {
