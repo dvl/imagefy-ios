@@ -8,6 +8,6 @@
 
 import Foundation
 
-let gtPrimaryColor = UIColor(rgba: "#2196F3")
+let kPrimaryColor = UIColor(rgba: "#673AB7" )
 let gtSecondaryColor = UIColor(rgba: "#FF5252")
 let gtYellowColor = UIColor(rgba: "#FFDE00")
