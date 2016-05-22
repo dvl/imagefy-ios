@@ -13,6 +13,7 @@ class WishOfferCell: UICollectionViewCell {
     @IBOutlet weak var imgOffer: UIImageView!
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblProductPrice: UILabel!
+    @IBOutlet weak var lblSalesman: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()

@@ -51,6 +51,7 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
         cell.imgOffer.image = UIImage(named: "accoustic_guitar")
         cell.lblProductName.text = "Acoustic Guitar"
         cell.lblProductPrice.text = "R$350,00"
+        cell.lblSalesman.text = "Imagefy"
         
         UIDesign.viewShadowPath(cell.layer, bounds: cell.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4))
         cell.imgOffer.layer.cornerRadius = 3.5
