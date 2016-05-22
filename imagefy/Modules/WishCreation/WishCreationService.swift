@@ -16,7 +16,7 @@ class WishCreationService: WishCreationServiceProtocol {
     private let service = BaseService()
     
     func createWish(wish: Wish) {
-        let parameters: [String: AnyObject] = ["buget": wish.price, "brief": wish.productDescription]
+        let parameters: [String: AnyObject] = ["buget": Int(wish.price) ?? 1, "brief": wish.productDescription]
         
         service.upload(path, image: wish.image!, parameters: parameters) { (json, error) in
             guard error == nil else {

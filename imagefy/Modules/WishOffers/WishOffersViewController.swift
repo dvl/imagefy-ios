@@ -17,12 +17,18 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
 
     var offers: [Offer] = []
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = false
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
         self.title = "Offers"
+        
+        self.refreshControl.tintColor = kAccentColor
+        self.refreshControl.addTarget(self, action: #selector(WishOffersViewController.reloadData), forControlEvents: .ValueChanged)
+        self.collectionView?.addSubview(self.refreshControl)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -33,6 +39,14 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func reloadData() {
+        self.collectionView?.reloadData()
+        
+        if self.refreshControl.refreshing {
+            self.refreshControl.endRefreshing()
+        }
     }
 
     // MARK: UICollectionViewDataSource

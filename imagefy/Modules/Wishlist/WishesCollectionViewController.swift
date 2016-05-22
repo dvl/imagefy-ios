@@ -17,6 +17,8 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     var wishes: [Wish] = []
     var presenter: WishListPresenterProtocol?
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,10 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
+        
+        self.refreshControl.tintColor = kAccentColor
+        self.refreshControl.addTarget(self, action: #selector(WishesCollectionViewController.reloadData), forControlEvents: .ValueChanged)
+        self.collectionView?.addSubview(self.refreshControl)
         
         WishListConfigurator.configure(self)
     }
@@ -87,6 +93,10 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         self.performSegueWithIdentifier("segueOffers", sender: wish)
     }
     
+    func reloadData() {
+        presenter?.getWishes()
+    }
+    
     //MARK: - WishListViewProtocol
     func showAlert(title: String, description: String) {
         
@@ -95,6 +105,10 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     func didGetWishes(wishes: [Wish]) {
         self.wishes = wishes
         self.collectionView?.reloadData()
+        
+        if self.refreshControl.refreshing {
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 

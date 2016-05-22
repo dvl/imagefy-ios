@@ -110,9 +110,10 @@ class BaseService: NSObject {
             switch encondingResult {
             case .Success(let upload, _, _):
                 upload.validate(statusCode: 200..<300)
-                    .validate(contentType: ["application/json"])
                     .response { response in
+                        
                         requestBlockCompletion(nil, nil)
+                        print(response.1)
                 }
             case .Failure(let error):
                 requestBlockCompletion(nil, NSError(domain: "\(error)", code: -1000, userInfo: nil))

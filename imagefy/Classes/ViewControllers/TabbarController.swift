@@ -16,10 +16,10 @@ class TabbarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let size:CGFloat = 65
+        let size:CGFloat = 70
 
         self.button = UIButton(type: .Custom)
-        self.button.frame = CGRectMake(0, 0, size + 10.0, size)
+        self.button.frame = CGRectMake(0, 0, size + 40.0, size)
         self.button.layer.cornerRadius = size/2
         self.button.layer.masksToBounds = true
         self.button.backgroundColor = kAccentColor
@@ -32,7 +32,7 @@ class TabbarController: UITabBarController {
         }
         else {
             var center: CGPoint = self.tabBar.center
-            center.y = center.y - heightDifference / 2.0
+            center.y = center.y - heightDifference / 2.0 + 15.0
             button.center = center
         }
         

@@ -86,8 +86,9 @@ class PictureViewController: UIViewController, WishCreationViewProtocol {
     
     // MARK: - WishCreationViewProtocol
     func wishCreationSuccess(wish: Wish) {
-        self.view.hideActivityViewWithAfterDelay(2)
         self.dismissViewControllerAnimated(true, completion: nil)
+        myAppDelegate.window!.showActivityViewWithLabel("Wish recorded  ;)")
+        myAppDelegate.window!.hideActivityViewWithAfterDelay(1)
     }
     
     func showAlert(title: String, description: String) {
