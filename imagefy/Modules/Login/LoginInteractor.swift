@@ -50,6 +50,8 @@ class LoginInteractor: LoginInteractorInputProtocol, LoginInteractorOutputProtoc
                 let user = User(name: name, email: email, firstName: firstName, lastName: lastName, imageUrl: profileImageUrl)
                 let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 delegate.loggedUser = user
+                
+                self.presenter?.didLogin(userId, token: token, key: key)
             }
         })
     }

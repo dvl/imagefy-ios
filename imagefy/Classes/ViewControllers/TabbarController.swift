@@ -43,6 +43,9 @@ class TabbarController: UITabBarController {
         self.button.pop_addAnimation(spring, forKey: "sendAnimation")
         
         self.view!.addSubview(button)
+        
+        self.navigationItem.hidesBackButton = true
+        self.navigationController?.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {

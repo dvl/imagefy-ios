@@ -21,7 +21,7 @@ class LoginPresenter: LoginPresenterProtocol {
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
     func didLogin(userId: String, token: String, key: String) {
-        
+        self.view?.loginSuccess(userId)
     }
     
     func didFail(loginError: LoginError) {

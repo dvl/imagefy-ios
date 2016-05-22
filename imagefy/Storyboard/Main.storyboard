@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gc-rs-cIh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="85s-Jb-int">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -99,6 +99,9 @@
                     <navigationItem key="navigationItem" id="s18-6g-RKS"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="9Gc-rs-cIh" kind="showDetail" identifier="segueMain" action="showViewController:sender:" id="T0F-HS-L8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onn-xE-xW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="1360" y="-328"/>
         </scene>
-        <!--Imagefy-->
+        <!--Wishes-->
         <scene sceneID="HeE-yI-bBb">
             <objects>
                 <collectionViewController id="MLB-Mb-LIS" customClass="WishesCollectionViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,7 +172,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="34P-7q-EfT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="0.32160129520000003" green="0.71085831290000001" blue="0.36629534270000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -213,16 +216,18 @@
                             <outlet property="delegate" destination="MLB-Mb-LIS" id="5mo-wn-6iL"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Imagefy" id="uZV-6B-CvK"/>
+                    <navigationItem key="navigationItem" title="Wishes" id="uZV-6B-CvK">
+                        <barButtonItem key="backBarButtonItem" title=" " id="39e-Ol-MyA"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szF-fc-cFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2112" y="-328"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="sBl-Qp-30S">
             <objects>
-                <viewController id="Jza-6i-CdW" sceneMemberID="viewController">
+                <viewController id="Jza-6i-CdW" customClass="ProfileViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qPw-yO-kb1"/>
                         <viewControllerLayoutGuide type="bottom" id="hHL-Nu-nKK"/>
@@ -230,7 +235,30 @@
                     <view key="view" contentMode="scaleToFill" id="RXS-MV-jef">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOU-qq-kh6">
+                                <rect key="frame" x="250" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5YN-4u-gVZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="LLL-Rn-glm"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-Vs-3dv">
+                                <rect key="frame" x="0.0" y="140" width="600" height="1"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="YGs-vg-Ftz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mXA-Vs-3dv" firstAttribute="leading" secondItem="RXS-MV-jef" secondAttribute="leadingMargin" constant="-20" id="JSi-dk-3gF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mXA-Vs-3dv" secondAttribute="trailing" constant="-20" id="Ytw-NK-FU2"/>
+                            <constraint firstItem="fOU-qq-kh6" firstAttribute="top" secondItem="qPw-yO-kb1" secondAttribute="bottom" constant="20" id="bBg-Kp-KDK"/>
+                            <constraint firstItem="fOU-qq-kh6" firstAttribute="centerX" secondItem="RXS-MV-jef" secondAttribute="centerX" id="h3J-rz-O6v"/>
+                            <constraint firstItem="mXA-Vs-3dv" firstAttribute="top" secondItem="fOU-qq-kh6" secondAttribute="bottom" constant="20" id="tL5-dX-moc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yZn-iq-zLX"/>
                 </viewController>

@@ -32,6 +32,9 @@
 		792F80091CF13C820056EC91 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F80081CF13C820056EC91 /* StringHelper.swift */; };
 		792F800B1CF142970056EC91 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F800A1CF142970056EC91 /* LoginConfigurator.swift */; };
 		79FC04561CF1717F00FE10E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC04551CF1717F00FE10E5 /* User.swift */; };
+		79FC045A1CF18D2000FE10E5 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */; };
+		79FC045B1CF18D2000FE10E5 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */; };
+		79FC045C1CF18D2000FE10E5 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79FC04591CF18BD500FE10E5 /* Comfortaa-Regular.ttf */; };
 		BB0E72161CF151C300DED58D /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E72151CF151C300DED58D /* Consts.swift */; };
 		BB0E72181CF152E900DED58D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0E72171CF152E900DED58D /* Default-568h@2x.png */; };
 		BBD513471CF03CFD0096CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD513461CF03CFD0096CB65 /* AppDelegate.swift */; };
@@ -107,6 +110,9 @@
 		792F80081CF13C820056EC91 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringHelper.swift; path = ../StringHelper.swift; sourceTree = "<group>"; };
 		792F800A1CF142970056EC91 /* LoginConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		79FC04551CF1717F00FE10E5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		79FC04591CF18BD500FE10E5 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		8FE091635C517DE174C08A45 /* Pods-imagefyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagefyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagefyUITests/Pods-imagefyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0E72151CF151C300DED58D /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		BB0E72171CF152E900DED58D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -322,6 +328,9 @@
 		BBD513771CF03D180096CB65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				79FC04571CF18BD500FE10E5 /* Comfortaa-Bold.ttf */,
+				79FC04581CF18BD500FE10E5 /* Comfortaa-Light.ttf */,
+				79FC04591CF18BD500FE10E5 /* Comfortaa-Regular.ttf */,
 				BBD513781CF042200096CB65 /* Assets.xcassets */,
 				BBD5137E1CF042200096CB65 /* imagefy.xcdatamodeld */,
 				BBD513801CF042200096CB65 /* Info.plist */,
@@ -489,6 +498,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FC045A1CF18D2000FE10E5 /* Comfortaa-Bold.ttf in Resources */,
+				79FC045B1CF18D2000FE10E5 /* Comfortaa-Light.ttf in Resources */,
+				79FC045C1CF18D2000FE10E5 /* Comfortaa-Regular.ttf in Resources */,
 				BBD5138A1CF0429C0096CB65 /* LaunchScreen.storyboard in Resources */,
 				BBD513811CF042200096CB65 /* Assets.xcassets in Resources */,
 				BB0E72181CF152E900DED58D /* Default-568h@2x.png in Resources */,
@@ -810,6 +822,7 @@
 					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
+					/Users/Guilherme/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -840,6 +853,7 @@
 					Files/Libs,
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
+					/Users/Guilherme/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
