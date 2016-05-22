@@ -230,7 +230,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="39e-Ol-MyA"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="rHz-H7-3Fl" kind="show" id="Ejf-8H-BYN"/>
+                        <segue destination="rHz-H7-3Fl" kind="show" identifier="segueOffers" id="Ejf-8H-BYN"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szF-fc-cFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,6 +244,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="x3T-7U-Tle">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="muP-iM-XVy">
                             <size key="itemSize" width="566" height="249"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

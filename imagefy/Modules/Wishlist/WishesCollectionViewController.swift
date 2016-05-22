@@ -14,6 +14,8 @@ private let reuseIdentifier = "WishesCellIdentifier"
 
 class WishesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var wishes: [Wish] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,15 +30,13 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueOffers" {
+            let vc = segue.destinationViewController as! WishOffersViewController
+            vc.offers = []
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -46,7 +46,7 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 1 //wishes.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -76,12 +76,14 @@ class WishesCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let client = BUYClient(shopDomain: "imagefy.myshopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
-        client.getProductsPage(0) { (products, page, reachedEnd, error) in
-            for product in products {
-                print(product.title)
-            }
-        }
+//        let client = BUYClient(shopDomain: "imagefy.myshopify.com", apiKey: "2f1f599bd8ba116edf14399407e99e19", channelId: "55729859")
+//        client.getProductsPage(0) { (products, page, reachedEnd, error) in
+//            for product in products {
+//                print(product.title)
+//            }
+//        }
+//        let wish = wishes[indexPath.row]
+        self.performSegueWithIdentifier("segueOffers", sender: nil)
     }
 }
 

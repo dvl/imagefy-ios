@@ -21,6 +21,7 @@ class WishOffersViewController: UICollectionViewController, UICollectionViewDele
         self.clearsSelectionOnViewWillAppear = false
         self.collectionView?.emptyDataSetSource = self
         self.collectionView?.emptyDataSetDelegate = self
+        self.title = "Offers"
     }
 
     override func didReceiveMemoryWarning() {
