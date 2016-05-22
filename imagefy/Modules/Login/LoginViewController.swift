@@ -33,6 +33,6 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     func loginSuccess(userId: String) {
-        
+        self.performSegueWithIdentifier("segueMain", sender: nil)
     }
 }

@@ -806,6 +806,7 @@
 					"\"${PODS_ROOT}/Fabric/iOS\"",
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
+					/Users/Guilherme/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -833,6 +834,7 @@
 					"\"${PODS_ROOT}/Fabric/iOS\"",
 					"$(PROJECT_DIR)/imagefy/Supporting",
 					Files/Libs,
+					/Users/Guilherme/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/imagefy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
