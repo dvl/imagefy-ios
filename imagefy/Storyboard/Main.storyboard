@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59o-Os-jCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="807"/>
+            <point key="canvasLocation" x="602" y="-681"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="du2-nI-aBW">
@@ -217,7 +217,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szF-fc-cFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2112" y="-328"/>
+            <point key="canvasLocation" x="2024" y="-328"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sBl-Qp-30S">
@@ -236,7 +236,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GB-T5-dPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2990" y="423"/>
+            <point key="canvasLocation" x="2024" y="383"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="oaL-UW-NJk">
+            <objects>
+                <viewController storyboardIdentifier="pictureViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kiE-Lf-sPZ" customClass="PictureViewController" customModule="imagefy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nwb-IE-iW5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Znf-X5-Wt3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fb4-E6-DuH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-05-79Q">
+                                <rect key="frame" x="20" y="564" width="560" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="5VR-eX-Zas"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Camera"/>
+                                    <segment title="Galery"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wu-Ul-zkX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Uc-05-79Q" firstAttribute="trailing" secondItem="fb4-E6-DuH" secondAttribute="trailingMargin" id="B7p-C6-SFF"/>
+                            <constraint firstItem="2Uc-05-79Q" firstAttribute="leading" secondItem="fb4-E6-DuH" secondAttribute="leadingMargin" id="Wgn-If-5oQ"/>
+                            <constraint firstItem="5wu-Ul-zkX" firstAttribute="leading" secondItem="fb4-E6-DuH" secondAttribute="leadingMargin" constant="-20" id="Wl8-5t-Cnm"/>
+                            <constraint firstItem="2Uc-05-79Q" firstAttribute="top" secondItem="5wu-Ul-zkX" secondAttribute="bottom" constant="8" id="lbZ-yT-Cqz"/>
+                            <constraint firstItem="Znf-X5-Wt3" firstAttribute="top" secondItem="2Uc-05-79Q" secondAttribute="bottom" constant="8" id="p0U-uq-JKS"/>
+                            <constraint firstItem="5wu-Ul-zkX" firstAttribute="top" secondItem="fb4-E6-DuH" secondAttribute="topMargin" id="p3K-pH-XcW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5wu-Ul-zkX" secondAttribute="trailing" constant="-20" id="pdv-BB-KEx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraContentView" destination="5wu-Ul-zkX" id="S2p-c6-fXC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRm-E3-XA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="731"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Kxh-yx-bSm">
@@ -259,7 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="me3-nM-ASf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2178" y="423"/>
+            <point key="canvasLocation" x="1360" y="383"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="93G-6P-WpA">
