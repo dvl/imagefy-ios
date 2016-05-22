@@ -14,17 +14,22 @@ class WishesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblProductBrief: UILabel!
     @IBOutlet weak var lblOffersCount: UILabel!
     
+    var otherSubContent: UIImageView!
+    
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.otherSubContent.removeFromSuperview()
     }
     
     func setupViewCell(urlImage: String, frameWidth: CGFloat) {
         UIDesign.viewShadowPath(self.content.layer, bounds: self.content.bounds, radius: 3.5, shadowOffset: CGSize(width: 4, height: 4), masksToBounds: true)
         UIDesign.viewShadowPath(self.layer, bounds: self.bounds, radius: 3.5, shadowOffset: CGSize(width: 1, height: 4), masksToBounds: false)
-        let otherSubContent = UIImageView()
-        otherSubContent.contentMode = .ScaleAspectFill
-        otherSubContent.clipsToBounds = true
-        otherSubContent.loadResourceImageWithUrl(urlImage, placeholder: nil)
+        
+        self.otherSubContent = UIImageView()
+        self.otherSubContent.contentMode = .ScaleAspectFill
+        self.otherSubContent.clipsToBounds = true
+        self.otherSubContent.loadResourceImageWithUrl(urlImage, placeholder: nil)
+        
         let height:CGFloat = frameWidth * 0.42
         
         otherSubContent.frame = CGRectMake(0, 0, frameWidth, height)
